@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3e8301</color>
-    <color name="colorPrimaryDark">#ffffff</color>
-    <color name="colorAccent">#080701</color>
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="colorPrimaryDark">#388E3C</color>
+    <color name="colorPrimaryLight">#C8E6C9</color>
+    <color name="colorAccent">#009688</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#757575</color>
+    <color name="colorIcons">#FFFFFF</color>
+    <color name="colorDivider">#BDBDBD</color>
+
+
+
+    <color name="btnGame1Primary">#3F51B5</color>
+    <color name="btnGame1PrimaryDark">#303F9F</color>
+
+
+    <color name="btnGame2Primary">#009688</color>
+    <color name="btnGame2PrimaryDark">#00796B</color>
 </resources>
