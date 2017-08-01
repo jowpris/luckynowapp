@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/luckynowapp.iml" filepath="$PROJECT_DIR$/luckynowapp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/luckynowapp-master.iml" filepath="$PROJECT_DIR$/luckynowapp-master.iml" />
     </modules>
   </component>
 </project>

@@ -43,11 +43,25 @@ implements NavigationView.OnNavigationItemSelectedListener {
         setTitle("Luckynow");
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/luckynow.ttf");
-        Button tmp = (Button)findViewById(R.id.btnPruebaDia);
-        tmp.setTypeface(custom_font);
-        tmp = (Button)findViewById(R.id.btnSorteo);
-        tmp.setTypeface(custom_font);
+        Button btnLoteria = (Button)findViewById(R.id.btnLoteria);
+        btnLoteria.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent showLoteria= new Intent(view.getContext(), LotteryActivity.class);
+                startActivity(showLoteria);
+            }
+        });
+        btnLoteria.setTypeface(custom_font);
+        Button btnSorteo = (Button)findViewById(R.id.btnSorteo);
+        btnSorteo.setTypeface(custom_font);
 
+        btnSorteo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent showSorteo= new Intent(view.getContext(), CineActivity.class);
+                startActivity(showSorteo);
+            }
+        });
         setTitle("Luckynow");
     }
 
