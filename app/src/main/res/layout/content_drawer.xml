@@ -29,13 +29,13 @@
 
             <Button
 
-                android:id="@+id/btnPruebaDia"
+                android:id="@+id/btnLoteria"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
                 android:theme="@style/btnJuego1"
-                android:text="Prueba del dia"
+                android:text="Lotería Diaria"
                 />
 
 
@@ -56,7 +56,7 @@
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
                 android:theme="@style/btnJuego2"
-                android:text="Sorteo"
+                android:text="Premio Instantáneo"
                 />
 
 
