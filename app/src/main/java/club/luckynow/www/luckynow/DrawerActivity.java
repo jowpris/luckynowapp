@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+
 public class DrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -36,6 +37,7 @@ public class DrawerActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+
         setTitle("Luckynow");
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/luckynow.ttf");
@@ -43,6 +45,8 @@ public class DrawerActivity extends AppCompatActivity
         tmp.setTypeface(custom_font);
         tmp = (Button)findViewById(R.id.btnSorteo);
         tmp.setTypeface(custom_font);
+
+        setTitle("Luckynow");
     }
 
     @Override

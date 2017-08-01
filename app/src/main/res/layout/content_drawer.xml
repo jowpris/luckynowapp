@@ -28,6 +28,7 @@
 
 
             <Button
+
                 android:id="@+id/btnPruebaDia"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -49,6 +50,7 @@
 
             <Button
                 android:id="@+id/btnSorteo"
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
