@@ -118,6 +118,10 @@ implements NavigationView.OnNavigationItemSelectedListener {
         }
         else if (id == R.id.nav_perfil) {
 
+
+           Intent i = new Intent(DrawerActivity.this, PerfilActivity.class);
+           startActivity(i);
+
 //           LinearLayout mainLayout = (LinearLayout) findViewById(R.id.activity_lottery);
 //           LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 //           View layout = inflater.inflate(R.layout.activity_drawer, null);
