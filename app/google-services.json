@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "953192165738",
-    "firebase_url": "https://login-74af3.firebaseio.com",
-    "project_id": "login-74af3",
-    "storage_bucket": "login-74af3.appspot.com"
+    "project_number": "597371666749",
+    "firebase_url": "https://login-6dca6.firebaseio.com",
+    "project_id": "login-6dca6",
+    "storage_bucket": "login-6dca6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:953192165738:android:a48b96ab89a0957c",
+        "mobilesdk_app_id": "1:597371666749:android:a48b96ab89a0957c",
         "android_client_info": {
           "package_name": "club.luckynow.www.luckynow"
         }
       },
       "oauth_client": [
         {
-          "client_id": "953192165738-q9gebq3vjjbhj4egrb4cvv1mh8n0rv11.apps.googleusercontent.com",
+          "client_id": "597371666749-m8j7qfomnte8ji1mhpifbl6t603grtlh.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "club.luckynow.www.luckynow",
-            "certificate_hash": "138253fc199c4b457d2c6c7f7eac6ab48e42fe1b"
+            "certificate_hash": "fb3ae8661657c8ff227bbdec673ef35c2aa08b89"
           }
         },
         {
-          "client_id": "953192165738-uekstiqgvt9pbd5qbcm3tkiqi0bumj2n.apps.googleusercontent.com",
+          "client_id": "597371666749-p45a98u7a2cihcev53gnj9fvaq0poeeu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAHBkPx07HLbGSH8WIQClLPM4td4o6SmOE"
+          "current_key": "AIzaSyDtswYJh_p9YHWauMuThmnh8gKI83hVWLE"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "953192165738-uekstiqgvt9pbd5qbcm3tkiqi0bumj2n.apps.googleusercontent.com",
+              "client_id": "597371666749-p45a98u7a2cihcev53gnj9fvaq0poeeu.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

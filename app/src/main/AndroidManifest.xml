@@ -9,10 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity
             android:name=".DrawerActivity"
-            android:label="@string/title_activity_drawer"
             android:theme="@style/AppTheme" />
         <activity android:name=".LotteryActivity" />
         <activity android:name=".CineActivity" />
@@ -20,11 +25,9 @@
 
         </activity>
         <activity android:name=".PerfilActivity" />
-        <activity android:name=".LoginActivity"><intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".LoginActivity">
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+        </activity>
     </application>
 
 </manifest>
