@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,7 +27,7 @@ import android.widget.RelativeLayout;
 public class DrawerActivity extends AppCompatActivity
 
 
-implements NavigationView.OnNavigationItemSelectedListener {
+implements NavigationView.OnNavigationItemSelectedListener,PerfilFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +53,15 @@ implements NavigationView.OnNavigationItemSelectedListener {
         btnLoteria.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent showLoteria= new Intent(view.getContext(), LotteryActivity.class);
+                Intent showLoteria= new Intent(view.getContext(), JuegoLoteriaActivity.class);
                 startActivity(showLoteria);
+
+//                LinearLayout mainLayout = (LinearLayout) findViewById(R.id.mainContainer);
+//                LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//                View layout = inflater.inflate(R.layout.fragment_juego_loteria, null);
+//                mainLayout.removeAllViews();
+//                mainLayout.addView(layout);
+
             }
         });
         btnLoteria.setTypeface(custom_font);
@@ -63,8 +71,15 @@ implements NavigationView.OnNavigationItemSelectedListener {
         btnSorteo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent showSorteo= new Intent(view.getContext(), CineActivity.class);
+                Intent showSorteo= new Intent(view.getContext(), LotteryActivity.class);
                 startActivity(showSorteo);
+
+                //LinearLayout mainLayout = (LinearLayout) findViewById(R.id.mainContainer);
+                //LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                //View layout = inflater.inflate(R.layout.activity_lottery, null);
+                //mainLayout.removeAllViews();
+                //mainLayout.addView(layout);
+
             }
         });
         setTitle("Luckynow");
@@ -119,19 +134,21 @@ implements NavigationView.OnNavigationItemSelectedListener {
         else if (id == R.id.nav_perfil) {
 
 
-           Intent i = new Intent(DrawerActivity.this, PerfilActivity.class);
-           startActivity(i);
-
-//           LinearLayout mainLayout = (LinearLayout) findViewById(R.id.activity_lottery);
-//           LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//           View layout = inflater.inflate(R.layout.activity_drawer, null);
-//           mainLayout.removeAllViews();
-//           mainLayout.addView(layout);
+          LinearLayout mainLayout = (LinearLayout) findViewById(R.id.mainContainer);
+           LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+           View layout = inflater.inflate(R.layout.activity_perfil, null);
+           mainLayout.removeAllViews();
+           mainLayout.addView(layout);
 
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }

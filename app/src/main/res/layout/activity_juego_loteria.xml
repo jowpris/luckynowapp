@@ -1,0 +1,87 @@
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="El siguiente sorteo empieza en: (HH:MM:SS)"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/txtCronometro"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="10dp"
+        android:text="00:00:00"
+        android:textAlignment="center"
+        android:textSize="15pt" />
+
+    <TextView
+        android:id="@+id/txtTienes"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tienes"
+        android:gravity="center"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+
+
+
+        <TextView
+            android:id="@+id/txtNumTicketsComprados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="80dp"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ticket"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtParticipando"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Participando"
+        android:gravity="center"/>
+
+</LinearLayout>
+
+    <Button
+        android:id="@+id/btnParticipar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Participar"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:theme="@style/btnJugar"
+        android:layout_alignParentBottom="true" />
+
+
+
+</RelativeLayout>
