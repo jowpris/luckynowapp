@@ -1,8 +1,7 @@
-
-<RelativeLayout
-    android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:design="http://schemas.android.com/apk/res-auto">
 <LinearLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -68,19 +67,45 @@
         android:text="Participando"
         android:gravity="center"/>
 
+
+
 </LinearLayout>
 
-    <Button
-        android:id="@+id/btnParticipar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Participar"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:paddingTop="30dp"
-        android:paddingBottom="30dp"
-        android:theme="@style/btnJugar"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnParticipar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Participar"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:theme="@style/btnJugar"
+            />
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottomNavigationViewTicket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            design:menu="@menu/menu_navigation2"
+            android:layout_alignParentBottom="true">
+
+        </android.support.design.widget.BottomNavigationView>
+
+    </LinearLayout>
+
+
+
+
+
+
 
 
 

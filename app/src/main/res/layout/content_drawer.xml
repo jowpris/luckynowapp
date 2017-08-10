@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:design="http://schemas.android.com/apk/res-auto"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="club.luckynow.www.luckynow.DrawerActivity"
     tools:showIn="@layout/app_bar_drawer">
@@ -52,6 +53,17 @@
                 />
 
         </RelativeLayout>
+
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            design:menu="@menu/menu_navigation"
+            >
+
+        </android.support.design.widget.BottomNavigationView>
 
     </LinearLayout>
 

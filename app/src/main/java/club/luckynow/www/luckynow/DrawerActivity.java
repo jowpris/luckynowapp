@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -22,6 +24,9 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import static java.security.AccessController.getContext;
 
 
 public class DrawerActivity extends AppCompatActivity
@@ -29,10 +34,14 @@ public class DrawerActivity extends AppCompatActivity
 
 implements NavigationView.OnNavigationItemSelectedListener,PerfilFragment.OnFragmentInteractionListener {
 
+    private BottomNavigationView bottomNavigationView;
+    private Context contexto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawer);
+
+        contexto = this.getApplicationContext();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -46,7 +55,7 @@ implements NavigationView.OnNavigationItemSelectedListener,PerfilFragment.OnFrag
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        setTitle("Luckynow");
+        //setTitle("Luckynow");
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/luckynow.ttf");
         Button btnLoteria = (Button)findViewById(R.id.btnLoteria);
@@ -74,6 +83,27 @@ implements NavigationView.OnNavigationItemSelectedListener,PerfilFragment.OnFrag
                 Intent showSorteo= new Intent(view.getContext(), LotteryActivity.class);
                 startActivity(showSorteo);
 
+
+                //        Menu inferior
+
+                bottomNavigationView= (BottomNavigationView) findViewById(R.id.bottomNavigationView);
+                bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        if (item.getItemId()==R.id.inicio){
+
+                            //Toast.makeText(contexto, "Inicio", Toast.LENGTH_LONG).show();
+
+
+                        }else if (item.getItemId()==R.id.recarga){
+
+                        }else if (item.getItemId()==R.id.premio){
+
+                        }
+                        return false;
+                    }
+                });
+
                 //LinearLayout mainLayout = (LinearLayout) findViewById(R.id.mainContainer);
                 //LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 //View layout = inflater.inflate(R.layout.activity_lottery, null);
@@ -83,6 +113,9 @@ implements NavigationView.OnNavigationItemSelectedListener,PerfilFragment.OnFrag
             }
         });
         setTitle("Luckynow");
+
+
+
     }
 
     @Override

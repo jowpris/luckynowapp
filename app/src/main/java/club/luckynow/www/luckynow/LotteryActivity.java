@@ -1,7 +1,11 @@
 package club.luckynow.www.luckynow;
 
+import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -17,6 +21,8 @@ public class LotteryActivity extends AppCompatActivity {
     private Wheel wheel1, wheel2, wheel3;
     private Button btn;
     private boolean isStarted;
+
+    private BottomNavigationView bottomNavigationView;
 
     public static final Random RANDOM = new Random();
 
@@ -106,5 +112,25 @@ public class LotteryActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+        bottomNavigationView= (BottomNavigationView) findViewById(R.id.bottomNavigationViewTicket);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId()==R.id.inicio1){
+                    //Toast.makeText(contexto, "Te vas", Toast.LENGTH_LONG).show();
+                    Intent i = new Intent(LotteryActivity.this, DrawerActivity.class);
+                    startActivity(i);
+
+                }else if (item.getItemId()==R.id.recarga){
+
+                }else if (item.getItemId()==R.id.premio){
+
+                }
+                return false;
+            }
+        });
+
     }
 }
