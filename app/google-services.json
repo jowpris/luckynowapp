@@ -15,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "597371666749-m8j7qfomnte8ji1mhpifbl6t603grtlh.apps.googleusercontent.com",
+          "client_id": "597371666749-rmbgrc98uvake8cud8li6icka6qbfk0q.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "club.luckynow.www.luckynow",
-            "certificate_hash": "fb3ae8661657c8ff227bbdec673ef35c2aa08b89"
+            "certificate_hash": "73d37c6a11d12a54a9546d8a667b79b105f27281"
           }
         },
         {
