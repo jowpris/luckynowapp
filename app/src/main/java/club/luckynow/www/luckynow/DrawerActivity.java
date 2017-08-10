@@ -158,9 +158,8 @@ implements NavigationView.OnNavigationItemSelectedListener,PerfilFragment.OnFrag
 
        if (id == R.id.nav_share) {
 
-           String url = "https://www.facebook.com/LuckyNowApp/";
-           Intent i = new Intent(Intent.ACTION_VIEW);
-           i.setData(Uri.parse(url));
+           Intent i = new Intent(this, CanjearActivity.class);
+
            startActivity(i);
 
         }
