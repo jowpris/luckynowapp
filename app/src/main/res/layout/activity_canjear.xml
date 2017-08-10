@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="club.luckynow.www.luckynow.CanjearActivity">
+
+    <ImageView
+        android:id="@+id/imgWU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/wu"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-205dp" />
+
+    <Button
+        android:id="@+id/btnCanjear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GENERAR CÓDIGO"
+        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteY="372dp" />
+
+    <TextView
+        android:id="@+id/txtCanjear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="41px"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="164dp"
+        tools:text="Una vez pulssado el boton generar código, este mostrará información para el cobro de su premio en cualquier agencia Western Union" />
+</android.support.constraint.ConstraintLayout>

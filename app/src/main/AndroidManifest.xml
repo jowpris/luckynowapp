@@ -14,21 +14,16 @@
             android:name=".DrawerActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".LotteryActivity" />
-        <activity android:name=".WelcomeActivity" >
-
+        <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".LoginActivity">
-
-
-
-        </activity>
+        <activity android:name=".LoginActivity"></activity>
         <activity android:name=".JuegoLoteriaActivity" />
+        <activity android:name=".CanjearActivity"></activity>
     </application>
 
 </manifest>
