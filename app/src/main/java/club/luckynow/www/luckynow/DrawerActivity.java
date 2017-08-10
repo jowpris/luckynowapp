@@ -41,7 +41,7 @@ implements NavigationView.OnNavigationItemSelectedListener,PerfilFragment.OnFrag
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawer);
 
-        contexto = this.getApplicationContext();
+        contexto = this;
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -98,6 +98,9 @@ implements NavigationView.OnNavigationItemSelectedListener,PerfilFragment.OnFrag
                         }else if (item.getItemId()==R.id.recarga){
 
                         }else if (item.getItemId()==R.id.premio){
+
+                            //Intent i = new Intent(null, CanjearActivity.class);
+                            //startActivity(i);
 
                         }
                         return false;
@@ -159,7 +162,6 @@ implements NavigationView.OnNavigationItemSelectedListener,PerfilFragment.OnFrag
        if (id == R.id.nav_share) {
 
            Intent i = new Intent(this, CanjearActivity.class);
-
            startActivity(i);
 
         }

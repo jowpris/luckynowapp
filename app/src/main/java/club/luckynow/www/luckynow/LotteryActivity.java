@@ -123,9 +123,12 @@ public class LotteryActivity extends AppCompatActivity {
                     Intent i = new Intent(LotteryActivity.this, DrawerActivity.class);
                     startActivity(i);
 
-                }else if (item.getItemId()==R.id.recarga){
+                }else if (item.getItemId()==R.id.recarga1){
 
-                }else if (item.getItemId()==R.id.premio){
+                }else if (item.getItemId()==R.id.premio1){
+
+                    Intent i = new Intent(LotteryActivity.this, CanjearActivity.class);
+                    startActivity(i);
 
                 }
                 return false;

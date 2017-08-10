@@ -66,9 +66,12 @@ public class JuegoLoteriaActivity extends AppCompatActivity implements Navigatio
                     Intent i = new Intent(JuegoLoteriaActivity.this, DrawerActivity.class);
                     startActivity(i);
 
-                }else if (item.getItemId()==R.id.recarga){
+                }else if (item.getItemId()==R.id.recarga1){
 
-                }else if (item.getItemId()==R.id.premio){
+                }else if (item.getItemId()==R.id.premio1){
+
+                    Intent i = new Intent(JuegoLoteriaActivity.this, CanjearActivity.class);
+                    startActivity(i);
 
                 }
                 return false;
