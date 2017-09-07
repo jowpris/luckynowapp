@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/menu_bottom"
+    >
+
+    <item
+        android:id="@+id/inicio"
+        android:icon="@drawable/ic_home_dice_"
+        android:checked="false"
+        android:title="@string/juegos"/>
+
+    <item
+        android:id="@+id/recompensas"
+        android:icon="@drawable/ic_recompensa"
+        android:title="@string/recompensa"
+        android:checked="false"
+        />
+
+    <item
+        android:id="@+id/top5"
+        android:icon="@drawable/ic_ranking_1"
+        android:title="@string/top5"
+        android:checked="false"
+        />
+    <item
+        android:id="@+id/recargar"
+        android:icon="@drawable/ic_cerdito"
+        android:title="@string/recargar"
+        android:checked="false"
+        />
+    <item
+        android:id="@+id/ayuda"
+        android:icon="@drawable/ic_ayuda_2"
+        android:checked="false"
+        android:title="@string/ayuda"
+        />
+
+    <!--<item-->
+        <!--android:id="@+id/perfil"-->
+        <!--android:icon="@drawable/ic_profile_"-->
+        <!--android:checked="false"-->
+        <!--android:title="Perfil"-->
+        <!--/>-->
+
+    <!--<item-->
+        <!--android:id="@+id/cerrar_sesion"-->
+        <!--android:icon="@drawable/ic_logout"-->
+        <!--android:checked="false"-->
+        <!--android:title="@string/salir"-->
+        <!--/>-->
+
+
+
+</menu>

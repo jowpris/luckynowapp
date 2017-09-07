@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/premio_lista"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/fondoPremios"
+    android:layout_margin="10dp"
+    android:layout_marginBottom="100dp"
+    android:padding="5dp">
+
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:src="@drawable/ic_recompensa"
+    android:layout_alignParentLeft="true"
+    android:padding="20dp"/>
+
+
+<Button
+    android:id="@+id/btn_reclamar_premio"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Reclamar"
+    android:background="@color/colorBotonJugarLoteria"
+    android:textColor="@color/blanco"
+    android:padding="20dp"
+    android:layout_margin="20dp"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    />
+</RelativeLayout>

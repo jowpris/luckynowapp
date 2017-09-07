@@ -1,0 +1,167 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="10dp"
+    >
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ksantacr.luckynow.AyudaFragment"
+        android:orientation="vertical"
+    android:paddingLeft="@dimen/espacio"
+    android:paddingRight="@dimen/espacio"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:src="@drawable/luckynow_logo"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/titulo"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/qu_es_luckynow"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/parrafo"
+        android:paddingTop="@dimen/espaciadoAyuda"
+        android:lineSpacingExtra="@dimen/interlineado"
+        android:text="@string/luckynow_es_lo_nuevo_en_loter_as_electr_nicas_que_har_sentir_a_sus_participantes_emociones_de_xito_con_sus_premios_muy_f_ciles_de_conseguir_si_sales_beneficiado" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/paddingTop"
+        android:textSize="@dimen/titulo"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/no_cre_as_en_las_loter_as" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/parrafo"
+        android:paddingTop="@dimen/espaciadoAyuda"
+        android:lineSpacingExtra="@dimen/interlineado"
+        android:text="@string/nosotros_te_devolvemos_la_confianza_de_ganar_y_sentirte_con_suerte_en_muchas_de_tus_participaciones_dentro_de_nuestros_juegos" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/paddingTop"
+        android:textSize="@dimen/titulo"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/c_mo_jugar_loter_a_diaria" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/parrafo"
+        android:lineSpacingExtra="@dimen/interlineado"
+        android:paddingTop="@dimen/espaciadoAyuda"
+        android:text="@string/loter_a_diaria_es_nuestra_modalidad_principal_donde_cada_participaci_n_que_realices_te_dar_mas_probabilidades_de_ganar_los_ganadores_de_esta_modalidad_ser_n_anunciados_dentro_de_nuestra_aplicaci_n_al_finalizar_el_d_a_te_deseamos_mucha_suerte_cada_lanzada_en_este_modo_de_juego_tendr_el_costo_de_100_luckymonedas" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/paddingTop"
+        android:textSize="@dimen/titulo"
+        android:text="@string/c_mo_jugar_tragamonedas"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/parrafo"
+        android:paddingTop="@dimen/espaciadoAyuda"
+        android:text="@string/este_juego_sin_duda_alguna_te_encantar_ya_que_recordar_s_aquellas_m_quinas_cl_sicas_de_casino_si_el_s_mbolo_que_gira_se_repite_tres_veces_autom_ticamente_habr_s_ganado_cada_lanzada_en_este_modo_de_juego_tendr_el_costo_de_cincuenta_luckymonedas" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/paddingTop"
+        android:textSize="@dimen/titulo"
+        android:text="@string/c_mo_recargar_m_s_luckymonedas"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/parrafo"
+        android:paddingTop="@dimen/espaciadoAyuda"
+        android:text="@string/recargar_m_s_luckymonedas_es_f_cil_npasos" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/parrafo"
+        android:paddingTop="@dimen/espaciadoAyuda"
+        android:text="@string/_1_dir_gete_al_men_de_recargas_que_tiene_un_s_mbolo_de_una_moneda" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/parrafo"
+        android:paddingTop="@dimen/espaciadoAyuda"
+        android:text="@string/_2_escribe_el_c_digo_brindado_al_hacer_tu_compra_y_dale_a_recargar" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/parrafo"
+        android:paddingTop="@dimen/espaciadoAyuda"
+        android:text="@string/condiciones_una_vez_adquirida_la_tarjeta_de_luckynow_y_recargada_en_la_aplicaci_n_no_se_reembolsar_el_dinero" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/paddingTop"
+        android:textSize="@dimen/parrafo"
+        android:text="@string/nota_verifica_siempre_que_se_haya_acreditado_la_cantidad_correcta_a_tu_cuenta_caso_contrario_comunicarse_al_correo_serviceluckynow_luckynow_club" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/parrafo"
+        android:paddingTop="@dimen/espaciadoAyuda"
+        android:text="@string/los_desarrolladores_de_esta_aplicaci_n_poseen_todos_los_derechos_reservados_sobre_el_material_y_uso_de_la_aplicaci_n"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/paddingTop"
+        android:textSize="@dimen/titulo"
+        android:text="@string/desarrolladores"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/parrafo"
+        android:paddingTop="@dimen/espaciadoAyuda"
+        android:text="@string/joel_collahuazo_fundador_de_luckynow_rickcolla_luckynow_club" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/parrafo"
+        android:paddingTop="@dimen/espaciadoAyuda"
+        android:text="@string/kevin_santacruz_gerente_general_ksantacr_luckynow_club"
+        android:paddingBottom="45dp"/>
+
+
+
+</LinearLayout>
+    </ScrollView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#388E3C</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorFondoMenu">#F4F4F4</color>
+    <color name="colorTexto">#757575</color>
+    <color name="colorIconos">#00A5B8</color>
+    <color name="blanco">#FFFFFF</color>
+
+    <color name="fondoJuegoLoteria">#DAF4DA</color>
+    <color name="fondoJuegoTragamonedas">#F4E6D7</color>
+    <color name="colorBotonJugarLoteria">#4CAF50</color>
+    <color name="colorBotonJugarTragamonedas">#FF9800</color>
+
+    <color name="fondoPremios">#EBEBEB</color>
+
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="texto">14sp</dimen>
+    <dimen name="textoMonedas">15sp</dimen>
+    <dimen name="titulo">15sp</dimen>
+    <dimen name="parrafo">13sp</dimen>
+    <dimen name="paddingTop">10dp</dimen>
+    <dimen name="botonesTamaño">12sp</dimen>
+    <dimen name="espacio">15dp</dimen>
+    <dimen name="espaciadoAyuda">8dp</dimen>
+    <dimen name="interlineado">3dp</dimen>
+
+
+</resources>

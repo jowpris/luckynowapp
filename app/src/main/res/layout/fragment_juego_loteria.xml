@@ -1,0 +1,71 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="club.luckynow.www.luckynow.JuegoLoteriaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Se esta preparando el sorteo"
+            android:textAlignment="center"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/textViewTicketsComprados"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="60sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:text="0"/>
+
+            <ImageView
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_tickets"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Participar"
+            android:background="@drawable/btn_participar"
+
+            android:textColor="@color/blanco"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:paddingLeft="60dp"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

@@ -1,0 +1,327 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="club.luckynow.www.luckynow.RankingFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/foto_lugar_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/foto_perfil_usuario"
+                android:layout_margin="20dp"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-30dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_ranking_1"
+
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/nombre_lugar_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/puntos_lugar_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_gravity="center"
+            />
+
+        <!--Inicio perfil-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/fondoPremios"
+                android:padding="20dp"
+                >
+
+                <ImageView
+                    android:id="@+id/foto_lugar_2"
+                    android:layout_width="50dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/foto_perfil_usuario"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/nombre_lugar_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAlignment="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/puntos_lugar_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAlignment="center"
+                        />
+
+
+                </LinearLayout>
+            </LinearLayout><!--Fin perfil-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="20dp"
+                >
+
+                <ImageView
+                    android:id="@+id/foto_lugar_3"
+                    android:layout_width="50dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/foto_perfil_usuario"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/nombre_lugar_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAlignment="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/puntos_lugar_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAlignment="center"
+                        />
+
+
+                </LinearLayout>
+            </LinearLayout><!--Fin perfil-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/fondoPremios"
+                android:padding="20dp"
+                >
+
+                <ImageView
+                    android:id="@+id/foto_lugar_4"
+                    android:layout_width="50dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/foto_perfil_usuario"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/nombre_lugar_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAlignment="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/puntos_lugar_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAlignment="center"
+                        />
+
+
+                </LinearLayout>
+            </LinearLayout><!--Fin perfil-->
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="20dp"
+                >
+
+                <ImageView
+                    android:id="@+id/foto_lugar_5"
+                    android:layout_width="50dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/foto_perfil_usuario"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/nombre_lugar_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAlignment="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/puntos_lugar_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAlignment="center"
+                        />
+
+
+                </LinearLayout>
+            </LinearLayout><!--Fin perfil-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/fondoPremios"
+                android:padding="20dp"
+                >
+
+                <ImageView
+                    android:id="@+id/foto_lugar_6"
+                    android:layout_width="50dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/foto_perfil_usuario"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/nombre_lugar_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAlignment="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/puntos_lugar_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAlignment="center"
+                        />
+
+
+                </LinearLayout>
+            </LinearLayout><!--Fin perfil-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="20dp"
+                >
+
+                <ImageView
+                    android:id="@+id/foto_lugar_7"
+                    android:layout_width="50dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/foto_perfil_usuario"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/nombre_lugar_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAlignment="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/puntos_lugar_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAlignment="center"
+                        />
+
+
+                </LinearLayout>
+            </LinearLayout><!--Fin perfil-->
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

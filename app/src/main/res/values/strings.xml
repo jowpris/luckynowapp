@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Luckynow</string>
+    <string name="qu_es_luckynow">¿Qué es Luckynow?</string>
+    <string name="luckynow_es_lo_nuevo_en_loter_as_electr_nicas_que_har_sentir_a_sus_participantes_emociones_de_xito_con_sus_premios_muy_f_ciles_de_conseguir_si_sales_beneficiado">LuckyNow es lo nuevo en loterías electrónicas que hará sentir a sus participantes emociones de éxito con sus premios muy fáciles de conseguir si sales beneficiado.</string>
+    <string name="no_cre_as_en_las_loter_as">¿No creías en las loterías?</string>
+    <string name="nosotros_te_devolvemos_la_confianza_de_ganar_y_sentirte_con_suerte_en_muchas_de_tus_participaciones_dentro_de_nuestros_juegos">Nosotros te devolvemos la confianza de ganar y sentirte con suerte en muchas de tus participaciones dentro de nuestros juegos!</string>
+    <string name="c_mo_jugar_loter_a_diaria">¿Cómo jugar lotería diaria?</string>
+    <string name="loter_a_diaria_es_nuestra_modalidad_principal_donde_cada_participaci_n_que_realices_te_dar_mas_probabilidades_de_ganar_los_ganadores_de_esta_modalidad_ser_n_anunciados_dentro_de_nuestra_aplicaci_n_al_finalizar_el_d_a_te_deseamos_mucha_suerte_cada_lanzada_en_este_modo_de_juego_tendr_el_costo_de_100_luckymonedas">Lotería diaria es nuestra modalidad principal donde cada participación que realices te dará mas probabilidades de ganar! Los ganadores de esta modalidad serán anunciados dentro de nuestra aplicación al finalizar el día. Te deseamos mucha suerte! Cada lanzada en este modo de juego tendrá el costo de 100 luckymonedas.</string>
+    <string name="c_mo_jugar_tragamonedas">¿Cómo jugar tragamonedas?</string>
+    <string name="este_juego_sin_duda_alguna_te_encantar_ya_que_recordar_s_aquellas_m_quinas_cl_sicas_de_casino_si_el_s_mbolo_que_gira_se_repite_tres_veces_autom_ticamente_habr_s_ganado_cada_lanzada_en_este_modo_de_juego_tendr_el_costo_de_cincuenta_luckymonedas">Este juego sin duda alguna te encantará ya que recordarás aquellas máquinas clásicas de casino, si el símbolo que gira se repite tres veces, automáticamente habrás ganado. Cada lanzada en este modo de juego tendrá el costo de cincuenta luckymonedas.</string>
+    <string name="c_mo_recargar_m_s_luckymonedas">¿Cómo recargar más luckymonedas?</string>
+    <string name="recargar_m_s_luckymonedas_es_f_cil_npasos">Recargar más luckymonedas es fácil! Pasos:</string>
+    <string name="_1_dir_gete_al_men_de_recargas_que_tiene_un_s_mbolo_de_una_moneda">1) Dirígete al menú de recargas que tiene un símbolo de una moneda.</string>
+    <string name="_2_escribe_el_c_digo_brindado_al_hacer_tu_compra_y_dale_a_recargar">2)Escribe el código brindado al hacer tu compra y dale a recargar.</string>
+    <string name="condiciones_una_vez_adquirida_la_tarjeta_de_luckynow_y_recargada_en_la_aplicaci_n_no_se_reembolsar_el_dinero">Condiciones: Una vez adquirida la tarjeta de LuckyNow y recargada en la aplicación, no se reembolsará el dinero.</string>
+    <string name="nota_verifica_siempre_que_se_haya_acreditado_la_cantidad_correcta_a_tu_cuenta_caso_contrario_comunicarse_al_correo_serviceluckynow_luckynow_club">Nota: Verifica siempre que se haya acreditado la cantidad correcta a tu cuenta, caso contrario comunicarse al correo serviceluckynow@luckynow.club</string>
+    <string name="los_desarrolladores_de_esta_aplicaci_n_poseen_todos_los_derechos_reservados_sobre_el_material_y_uso_de_la_aplicaci_n">Los desarrolladores de esta aplicación poseen todos los derechos reservados sobre el material y uso de la aplicación.</string>
+    <string name="desarrolladores">Desarrolladores:</string>
+    <string name="joel_collahuazo_fundador_de_luckynow_rickcolla_luckynow_club">Joel Collahuazo (Fundador de LuckyNow) rickcolla@luckynow.club</string>
+    <string name="kevin_santacruz_gerente_general_ksantacr_luckynow_club">Kevin Santacruz (Gerente General) ksantacr@luckynow.club</string>
+    <string name="recargar">Recargar</string>
+    <string name="juegos">Juegos</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="salir">Salir</string>
+    <string name="g_nale_al_tragamonedas">Gánale al tragamonedas</string>
+    <string name="participa_en_la_loter_a_diaria">Participa en la lotería diaria</string>
+    <string name="c_digo">CÓDIGO</string>
+
+
+    <string name="top5">Ranking</string>
+    <string name="recompensa">Premios</string>
+    <string name="no_internet_title">No hay conexción a internet</string>
+    <string name="porfavor_verifique_su_conexion_a_internet">Porfavor verifique que está conectado a una red de internet para continuar.</string>
+    <string name="cerrar">Cerrar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Luckynow</string>
+    <string name="qu_es_luckynow">What is Luckynow?</string>
+    <string name="luckynow_es_lo_nuevo_en_loter_as_electr_nicas_que_har_sentir_a_sus_participantes_emociones_de_xito_con_sus_premios_muy_f_ciles_de_conseguir_si_sales_beneficiado">LuckyNow is the newest thing in E-Lotteries that will make your participants feel like a winner with their easy-to-get prizes.</string>
+    <string name="no_cre_as_en_las_loter_as">Did you not trust lotteries?</string>
+    <string name="nosotros_te_devolvemos_la_confianza_de_ganar_y_sentirte_con_suerte_en_muchas_de_tus_participaciones_dentro_de_nuestros_juegos">We give you back the confidence to win and feel lucky in many of your stakes in our games!</string>
+    <string name="c_mo_jugar_loter_a_diaria">How to play daily lottery?</string>
+    <string name="loter_a_diaria_es_nuestra_modalidad_principal_donde_cada_participaci_n_que_realices_te_dar_mas_probabilidades_de_ganar_los_ganadores_de_esta_modalidad_ser_n_anunciados_dentro_de_nuestra_aplicaci_n_al_finalizar_el_d_a_te_deseamos_mucha_suerte_cada_lanzada_en_este_modo_de_juego_tendr_el_costo_de_100_luckymonedas">Daily lottery is our main mode where with each try the higher your chances to win!
+The winners of this mode will be announced within our app at the end of the day. We wish you good luck!
+Each game launched in this mode will have the cost of 100 luckycoins.</string>
+    <string name="c_mo_jugar_tragamonedas">How to play slots?</string>
+    <string name="este_juego_sin_duda_alguna_te_encantar_ya_que_recordar_s_aquellas_m_quinas_cl_sicas_de_casino_si_el_s_mbolo_que_gira_se_repite_tres_veces_autom_ticamente_habr_s_ganado_cada_lanzada_en_este_modo_de_juego_tendr_el_costo_de_cincuenta_luckymonedas">This game will undoubtedly delight you as you will remember those retro casino machines, if the spinning symbol appears three times in a row, you will have automatically won.
+Each launched in this game mode will have the cost of fifty luckycoins.</string>
+    <string name="c_mo_recargar_m_s_luckymonedas">How to get more luckycoins?</string>
+    <string name="recargar_m_s_luckymonedas_es_f_cil_npasos">Getting more luckycoins is easy!</string>
+    <string name="_1_dir_gete_al_men_de_recargas_que_tiene_un_s_mbolo_de_una_moneda">1) Go to the reload menu that has a coin symbol.</string>
+    <string name="_2_escribe_el_c_digo_brindado_al_hacer_tu_compra_y_dale_a_recargar">2) Write the code provided when making your purchase and click on Add coins.</string>
+    <string name="condiciones_una_vez_adquirida_la_tarjeta_de_luckynow_y_recargada_en_la_aplicaci_n_no_se_reembolsar_el_dinero">Conditions: Once the LuckyNow card has been purchased and reloaded with luckycoins in the app, the money will not be refunded.</string>
+    <string name="nota_verifica_siempre_que_se_haya_acreditado_la_cantidad_correcta_a_tu_cuenta_caso_contrario_comunicarse_al_correo_serviceluckynow_luckynow_club">Note: Always verify that the correct amount has been credited to your account, otherwise contact serviceluckynow@luckynow.club</string>
+    <string name="los_desarrolladores_de_esta_aplicaci_n_poseen_todos_los_derechos_reservados_sobre_el_material_y_uso_de_la_aplicaci_n">The developers of this application have all the rights reserved on the material and use of the application.</string>
+    <string name="desarrolladores">Developers:</string>
+    <string name="joel_collahuazo_fundador_de_luckynow_rickcolla_luckynow_club">Joel Collahuazo (Founder of LuckyNow) rickcolla@luckynow.club</string>
+    <string name="kevin_santacruz_gerente_general_ksantacr_luckynow_club">Kevin Santacruz (General Manager) ksantacr@luckynow.club</string>
+    <string name="recargar">Add coins</string>
+    <string name="juegos">Games</string>
+    <string name="ayuda">Help</string>
+    <string name="salir">Exit</string>
+    <string name="g_nale_al_tragamonedas">Beat the slot machine</string>
+    <string name="participa_en_la_loter_a_diaria">Participate in the daily lottery</string>
+    <string name="c_digo">CODE</string>
+    <string name="top5">Ranking</string>
+    <string name="recompensa">Reward</string>
+    <string name="no_internet_title">No internet connection</string>
+    <string name="porfavor_verifique_su_conexion_a_internet">Please turn on internet connection to continue.</string>
+    <string name="cerrar">close</string>
+</resources>
