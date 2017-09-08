@@ -81,137 +81,87 @@ public class RankingFragment extends Fragment {
 
         final View view = inflater.inflate(R.layout.fragment_ranking, container, false);
 
-        final ArrayList<Ganador> ganadores = new ArrayList<Ganador>();
+        final ArrayList<Ganador> ganadores = Usuario.ganadores;
 
-        AsyncHttpClient client = new AsyncHttpClient();
+        TextView txtView = (TextView)view.findViewById(R.id.nombre_lugar_1);
+        txtView.setText(ganadores.get(0).getNombre());
 
-        client.get("https://ksantacrwordpresscom.000webhostapp.com/ganadores.php", new AsyncHttpResponseHandler() {
+        TextView txtView1 = (TextView)view.findViewById(R.id.nombre_lugar_2);
+        txtView1.setText(ganadores.get(1).getNombre());
 
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+        TextView txtView2 = (TextView)view.findViewById(R.id.nombre_lugar_3);
+        txtView2.setText(ganadores.get(2).getNombre());
 
-                //Log.d("Succens", ""+new String(responseBody));
+        TextView txtView3 = (TextView)view.findViewById(R.id.nombre_lugar_4);
+        txtView3.setText(ganadores.get(3).getNombre());
 
-                String data= new String(responseBody);
+        TextView txtView4 = (TextView)view.findViewById(R.id.nombre_lugar_5);
+        txtView4.setText(ganadores.get(4).getNombre());
 
-                try{
-                    JSONArray jsonArray = new JSONArray(data);
-                    //String texto = "";
-                    //Log.d("JSON ARRAY", jsonArray.toString());
+        TextView txtView5 = (TextView)view.findViewById(R.id.nombre_lugar_6);
+        txtView5.setText(ganadores.get(5).getNombre());
 
-                    for (int i=0; i < jsonArray.length(); i++){
+        TextView txtView6 = (TextView)view.findViewById(R.id.nombre_lugar_7);
+        txtView6.setText(ganadores.get(6).getNombre());
 
-                        Ganador tmpGanador = new Ganador(jsonArray.getJSONObject(i).getString("nombre"), jsonArray.getJSONObject(i).getString("imagen"), jsonArray.getJSONObject(i).getInt("puntos"));
-                        //Log.d("Tipo de : ", tmpGanador.getFoto()+ "  "+tmpGanador.getFoto().equals("foto_perfil_usuario.png"));
-                        ganadores.add(tmpGanador);
-
-
-                        //texto = jsonArray.getJSONObject(i).getString("nombre");
-                        //Usuario.cantidadPremios = new Integer(jsonArray.getJSONObject(i).getString("premios"));
-
-                        //Usuario.puntos = new Integer(jsonArray.getJSONObject(i).getString("puntos"));
-                        //Log.d("Correo", texto);
-                        //usuarios.add(texto);
-                        //Usuario.monedas = new Integer(texto);
-                        //HomeActivity.textViewCantidadMonedas.setText(""+Usuario.monedas);
-
-                        //TextView a = (TextView) view.findViewById(R.id.nombre_lugar_1);
-                        //a.setText(texto);
-
-                    }
-                }catch (Exception e){
-                    e.printStackTrace();
-                    Log.d("Mensaje", "No lo puedo convertir a json");
-                }
-
-                //Log.d("Ganadores", ""+ganadores.size());
-                TextView txtView = (TextView)view.findViewById(R.id.nombre_lugar_1);
-                txtView.setText(ganadores.get(0).getNombre());
-
-                TextView txtView1 = (TextView)view.findViewById(R.id.nombre_lugar_2);
-                txtView1.setText(ganadores.get(1).getNombre());
-
-                TextView txtView2 = (TextView)view.findViewById(R.id.nombre_lugar_3);
-                txtView2.setText(ganadores.get(2).getNombre());
-
-                TextView txtView3 = (TextView)view.findViewById(R.id.nombre_lugar_4);
-                txtView3.setText(ganadores.get(3).getNombre());
-
-                TextView txtView4 = (TextView)view.findViewById(R.id.nombre_lugar_5);
-                txtView4.setText(ganadores.get(4).getNombre());
-
-                TextView txtView5 = (TextView)view.findViewById(R.id.nombre_lugar_6);
-                txtView5.setText(ganadores.get(5).getNombre());
-
-                TextView txtView6 = (TextView)view.findViewById(R.id.nombre_lugar_7);
-                txtView6.setText(ganadores.get(6).getNombre());
-
-                ImageView imageView = (ImageView) view.findViewById(R.id.foto_lugar_1);
-                ImageView imageView2 = (ImageView) view.findViewById(R.id.foto_lugar_2);
-                ImageView imageView3 = (ImageView) view.findViewById(R.id.foto_lugar_3);
-                ImageView imageView4 = (ImageView) view.findViewById(R.id.foto_lugar_4);
-                ImageView imageView5 = (ImageView) view.findViewById(R.id.foto_lugar_5);
-                ImageView imageView6 = (ImageView) view.findViewById(R.id.foto_lugar_6);
-                ImageView imageView7 = (ImageView) view.findViewById(R.id.foto_lugar_7);
+        ImageView imageView = (ImageView) view.findViewById(R.id.foto_lugar_1);
+        ImageView imageView2 = (ImageView) view.findViewById(R.id.foto_lugar_2);
+        ImageView imageView3 = (ImageView) view.findViewById(R.id.foto_lugar_3);
+        ImageView imageView4 = (ImageView) view.findViewById(R.id.foto_lugar_4);
+        ImageView imageView5 = (ImageView) view.findViewById(R.id.foto_lugar_5);
+        ImageView imageView6 = (ImageView) view.findViewById(R.id.foto_lugar_6);
+        ImageView imageView7 = (ImageView) view.findViewById(R.id.foto_lugar_7);
 
 
-                //Log.d("BOol", ""+ (ganadores.get(0).getFoto()=="foto_perfil_usuario.png"));
+        //Log.d("BOol", ""+ (ganadores.get(0).getFoto()=="foto_perfil_usuario.png"));
 
 
-                if(!ganadores.get(0).getFoto().contains("foto_perfil_usuario.png")){
-                    //Log.d("Hola", ""+ganadores.get(0).getFoto());
-                    Uri myUri = Uri.parse(ganadores.get(0).getFoto());
-                    Glide.with(getContext()).load(myUri).apply(RequestOptions.circleCropTransform()).into(imageView);
-                }
-                if(!ganadores.get(1).getFoto().contains("foto_perfil_usuario.png")){
-                    //Log.d("Hola2", ""+ganadores.get(1).getFoto());
-                    Uri myUri = Uri.parse(ganadores.get(1).getFoto());
-                    Glide.with(getContext()).load(myUri).apply(RequestOptions.circleCropTransform()).into(imageView2);
-                }
-                if(!ganadores.get(2).getFoto().contains("foto_perfil_usuario.png")){
-                    //Log.d("Holaasd", ""+ganadores.get(2).getFoto());
-                    Uri myUri = Uri.parse(ganadores.get(2).getFoto());
-                    Glide.with(getContext()).load(myUri).apply(RequestOptions.circleCropTransform()).into(imageView3);
-                }
-                if(!ganadores.get(3).getFoto().contains("foto_perfil_usuario.png")){
-                    Uri myUri = Uri.parse(ganadores.get(3).getFoto());
-                    Glide.with(getContext()).load(myUri).apply(RequestOptions.circleCropTransform()).into(imageView4);
-                }
-                if(!ganadores.get(4).getFoto().contains("foto_perfil_usuario.png")){
-                    Uri myUri = Uri.parse(ganadores.get(4).getFoto());
-                    Glide.with(getContext()).load(myUri).apply(RequestOptions.circleCropTransform()).into(imageView5);
-                }
-                if(!ganadores.get(5).getFoto().contains("foto_perfil_usuario.png")){
-                    Uri myUri = Uri.parse(ganadores.get(5).getFoto());
-                    Glide.with(getContext()).load(myUri).apply(RequestOptions.circleCropTransform()).into(imageView6);
-                }
-                if(!ganadores.get(6).getFoto().contains("foto_perfil_usuario.png")){
-                    Uri myUri = Uri.parse(ganadores.get(6).getFoto());
-                    Glide.with(getContext()).load(myUri).apply(RequestOptions.circleCropTransform()).into(imageView7);
-                }
+        if(!ganadores.get(0).getFoto().contains("foto_perfil_usuario.png")){
+            //Log.d("Hola", ""+ganadores.get(0).getFoto());
+            Uri myUri = Uri.parse(ganadores.get(0).getFoto());
+            Glide.with(getContext()).load(myUri).apply(RequestOptions.circleCropTransform()).into(imageView);
+        }
+        if(!ganadores.get(1).getFoto().contains("foto_perfil_usuario.png")){
+            //Log.d("Hola2", ""+ganadores.get(1).getFoto());
+            Uri myUri = Uri.parse(ganadores.get(1).getFoto());
+            Glide.with(getContext()).load(myUri).apply(RequestOptions.circleCropTransform()).into(imageView2);
+        }
+        if(!ganadores.get(2).getFoto().contains("foto_perfil_usuario.png")){
+            //Log.d("Holaasd", ""+ganadores.get(2).getFoto());
+            Uri myUri = Uri.parse(ganadores.get(2).getFoto());
+            Glide.with(getContext()).load(myUri).apply(RequestOptions.circleCropTransform()).into(imageView3);
+        }
+        if(!ganadores.get(3).getFoto().contains("foto_perfil_usuario.png")){
+            Uri myUri = Uri.parse(ganadores.get(3).getFoto());
+            Glide.with(getContext()).load(myUri).apply(RequestOptions.circleCropTransform()).into(imageView4);
+        }
+        if(!ganadores.get(4).getFoto().contains("foto_perfil_usuario.png")){
+            Uri myUri = Uri.parse(ganadores.get(4).getFoto());
+            Glide.with(getContext()).load(myUri).apply(RequestOptions.circleCropTransform()).into(imageView5);
+        }
+        if(!ganadores.get(5).getFoto().contains("foto_perfil_usuario.png")){
+            Uri myUri = Uri.parse(ganadores.get(5).getFoto());
+            Glide.with(getContext()).load(myUri).apply(RequestOptions.circleCropTransform()).into(imageView6);
+        }
+        if(!ganadores.get(6).getFoto().contains("foto_perfil_usuario.png")){
+            Uri myUri = Uri.parse(ganadores.get(6).getFoto());
+            Glide.with(getContext()).load(myUri).apply(RequestOptions.circleCropTransform()).into(imageView7);
+        }
 
-                TextView txtPuntos = (TextView)view.findViewById(R.id.puntos_lugar_1);
-                txtPuntos.setText(""+ganadores.get(0).getPuntos());
-                TextView txtPuntos2 = (TextView)view.findViewById(R.id.puntos_lugar_2);
-                txtPuntos2.setText(""+ganadores.get(1).getPuntos());
-                TextView txtPuntos3 = (TextView)view.findViewById(R.id.puntos_lugar_3);
-                txtPuntos3.setText(""+ganadores.get(2).getPuntos());
-                TextView txtPuntos4 = (TextView)view.findViewById(R.id.puntos_lugar_4);
-                txtPuntos4.setText(""+ganadores.get(3).getPuntos());
-                TextView txtPuntos5 = (TextView)view.findViewById(R.id.puntos_lugar_5);
-                txtPuntos5.setText(""+ganadores.get(4).getPuntos());
-                TextView txtPuntos6 = (TextView)view.findViewById(R.id.puntos_lugar_6);
-                txtPuntos6.setText(""+ganadores.get(5).getPuntos());
-                TextView txtPuntos7 = (TextView)view.findViewById(R.id.puntos_lugar_7);
-                txtPuntos7.setText(""+ganadores.get(6).getPuntos());
-
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-
-            }
-        });
+        TextView txtPuntos = (TextView)view.findViewById(R.id.puntos_lugar_1);
+        txtPuntos.setText(""+ganadores.get(0).getPuntos());
+        TextView txtPuntos2 = (TextView)view.findViewById(R.id.puntos_lugar_2);
+        txtPuntos2.setText(""+ganadores.get(1).getPuntos());
+        TextView txtPuntos3 = (TextView)view.findViewById(R.id.puntos_lugar_3);
+        txtPuntos3.setText(""+ganadores.get(2).getPuntos());
+        TextView txtPuntos4 = (TextView)view.findViewById(R.id.puntos_lugar_4);
+        txtPuntos4.setText(""+ganadores.get(3).getPuntos());
+        TextView txtPuntos5 = (TextView)view.findViewById(R.id.puntos_lugar_5);
+        txtPuntos5.setText(""+ganadores.get(4).getPuntos());
+        TextView txtPuntos6 = (TextView)view.findViewById(R.id.puntos_lugar_6);
+        txtPuntos6.setText(""+ganadores.get(5).getPuntos());
+        TextView txtPuntos7 = (TextView)view.findViewById(R.id.puntos_lugar_7);
+        txtPuntos7.setText(""+ganadores.get(6).getPuntos());
 
 
         return view;

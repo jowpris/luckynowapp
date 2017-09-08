@@ -1,12 +1,21 @@
 package club.luckynow.www.luckynow;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.sql.BatchUpdateException;
+import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -64,7 +73,55 @@ public class JuegoLoteriaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_juego_loteria, container, false);
+        //final String FORMAT = "%02d:%02d:%02d";
+        //int seconds , minutes;
+        View view = inflater.inflate(R.layout.fragment_juego_loteria, container, false);
+
+        final TextView text1, textViewTicketsComprados;
+        text1 = (TextView)view.findViewById(R.id.txtHora);
+        textViewTicketsComprados = (TextView)view.findViewById(R.id.textViewTicketsComprados);
+
+
+        //Log.d("PARTICIPANDO <-------------------- : ", ""+Usuario.participando);
+        final Button button = (Button) view.findViewById(R.id.btn_participar_loteria);
+
+        Log.d("Usuarop esta participando=?", ""+Usuario.participando);
+        if(Usuario.participando){
+
+            button.setEnabled(false);
+            button.setBackgroundResource(R.drawable.bg_btn_lanzado);
+            button.setPadding(0,0,0,0);
+            button.setText("Ya estas participando");
+            button.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+
+        }else{
+        }
+        textViewTicketsComprados.setText(""+Usuario.cantidadParticipantes);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Toast.makeText(getContext(), "clic "+Usuario.participando, Toast.LENGTH_LONG).show();
+
+                if(Usuario.monedas>=200){
+                    Usuario.monedas-=200;
+                    Usuario.puntos+=50;
+                    HomeActivity.textViewCantidadMonedas.setText(""+Usuario.monedas);
+                    Usuario.actualizarPuntos();
+
+                    new ParticiparLoteria(getContext(), button, textViewTicketsComprados).execute("Ya estas participando");
+
+                }else{
+
+                    Toast.makeText(getContext(), "No te quedan luckymonedas :(", Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
+        //ConsultarMilisegundos consultarMilisegundos = (ConsultarMilisegundos)
+
+        new ConsultarMilisegundos(getContext(), text1).execute("Se está preparando el sorteo");
+
+        return view;
 
 
     }

@@ -1,71 +1,140 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="club.luckynow.www.luckynow.JuegoLoteriaFragment">
+    tools:context="club.luckynow.www.luckynow.JuegoLoteriaFragment"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="top"
         android:orientation="vertical"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
-        android:layout_gravity="center"
-        android:gravity="center">
+        android:background="@color/blanco"
+        >
 
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Se esta preparando el sorteo"
-            android:textAlignment="center"
-            />
 
         <LinearLayout
-            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:background="@color/fondoJuegoLoteria"
+            android:gravity="center"
+            android:layout_gravity="top"
+            android:padding="20dp"
+
+            >
 
 
-            <TextView
-                android:layout_weight="1"
-                android:id="@+id/textViewTicketsComprados"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="60sp"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:text="0"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="18sp"
+                    android:text="Tiempo restante"/>
+
+                <TextView
+                    android:id="@+id/txtHora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Se está preparando el sorteo"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    />
+
+
+            </LinearLayout>
 
             <ImageView
-                android:layout_weight="1"
-                android:layout_gravity="bottom"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/img_tickets"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="0dp"
+                app:srcCompat="@drawable/ic_reloj"
+                />
+
 
         </LinearLayout>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Participar"
-            android:background="@drawable/btn_participar"
-
-            android:textColor="@color/blanco"
-            android:textStyle="bold"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="30dp"
             android:layout_gravity="center"
-            android:gravity="center_vertical"
-            android:paddingLeft="60dp"
-            />
+
+            android:padding="20dp"
+            android:gravity="center"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/textViewTicketsComprados"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="60sp"
+                    android:textColor="@color/colorTexto"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="participando"/>
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:src="@drawable/img_tickets"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+
+
+            <Button
+
+                android:id="@+id/btn_participar_loteria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_participar"
+                android:text="Participar"
+                android:textAlignment="textStart"
+                android:paddingLeft="50dp"
+                android:textColor="@color/blanco"
+                android:textSize="@dimen/botonesTamaño"
+                android:textStyle="bold"
+
+                />
+
+        </LinearLayout>
+
 
 
 
     </LinearLayout>
-
-
-
 
 </ScrollView>

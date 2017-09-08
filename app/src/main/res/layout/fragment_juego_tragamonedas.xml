@@ -11,23 +11,27 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center"
-
-        >
-
-    <LinearLayout
-        android:id="@+id/imgs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
         android:gravity="center"
         >
 
+
+
         <LinearLayout
-            android:layout_width="310dp"
-            android:layout_height="150dp"
-            android:background="@drawable/slot3"
+        android:id="@+id/imgs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="125dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/bg_playslotmachine_"
+        android:gravity="center"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="100dp"
 
             android:layout_gravity="center"
             android:gravity="center"
@@ -61,15 +65,19 @@
 
 
     </LinearLayout>
+
         <TextView
-            android:id="@+id/msg"
+            android:id="@+id/textViewMonedasSiGana"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_below="@id/imgs"
-            android:layout_centerHorizontal="true"
             android:textColor="@color/blanco"
-            android:layout_gravity="center"   />
+            android:layout_marginTop="-207dp"
+            android:layout_marginBottom="207dp"
+            android:layout_marginLeft="-70dp"
+            android:textStyle="bold"
+            android:text="Haz ganado : 000" />
+
+
 
         <Button
             android:id="@+id/btnLanzar"
@@ -79,11 +87,10 @@
             android:text="Lanzar"
             android:textColor="@color/blanco"
             android:textStyle="bold"
-            android:layout_marginTop="30dp"
-            android:layout_below="@id/msg"
             android:layout_gravity="center"
             android:gravity="center_vertical"
             android:paddingLeft="60dp"
+
 
             />
     </LinearLayout>

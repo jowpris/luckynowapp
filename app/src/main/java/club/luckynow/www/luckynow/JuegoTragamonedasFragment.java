@@ -89,7 +89,8 @@ public class JuegoTragamonedasFragment extends Fragment {
         img2 = (ImageView) view.findViewById(R.id.slot_2);
         img3 = (ImageView) view.findViewById(R.id.slot_3);
         btn = (Button) view.findViewById(R.id.btnLanzar);
-        msg = (TextView) view.findViewById(R.id.msg);
+        final TextView textViewMonedasSiGana = (TextView)view.findViewById(R.id.textViewMonedasSiGana);
+        //msg = (TextView) view.findViewById(R.id.msg);
 
 
 
@@ -192,6 +193,7 @@ public class JuegoTragamonedasFragment extends Fragment {
                                             });
                                     Usuario.puntos+=25;
                                     Usuario.monedas+= 500;
+                                    textViewMonedasSiGana.setText("Haz ganado : 500");
                                     Usuario.actualizarPuntos();
                                     HomeActivity.textViewCantidadMonedas.setText("" + Usuario.monedas);
                                     AlertDialog alert = builder.create();
@@ -204,7 +206,7 @@ public class JuegoTragamonedasFragment extends Fragment {
                                             //btn.setEnabled(true);
                                             Usuario.puntos+=5;
                                             Usuario.actualizarPuntos();
-                                            Toast.makeText(getContext(), "Vaya! Inténtalo de nuevo", Toast.LENGTH_SHORT).show();
+                                            textViewMonedasSiGana.setText("Haz ganado : 000");
 
                                         }
                                     }, 450);

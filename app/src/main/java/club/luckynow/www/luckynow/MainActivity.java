@@ -12,9 +12,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
@@ -77,7 +80,32 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
         }
 
         AsyncHttpClient client = new AsyncHttpClient();
+//        Consultar ganadores
+        client.get("https://ksantacrwordpresscom.000webhostapp.com/ganadores.php", new AsyncHttpResponseHandler() {
 
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+
+                String data= new String(responseBody);
+                try{
+                    JSONArray jsonArray = new JSONArray(data);
+                    for (int i=0; i < jsonArray.length(); i++){
+                        Ganador tmpGanador = new Ganador(jsonArray.getJSONObject(i).getString("nombre"), jsonArray.getJSONObject(i).getString("imagen"), jsonArray.getJSONObject(i).getInt("puntos"));
+                        Usuario.ganadores.add(tmpGanador);
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                    //Log.d("Mensaje", "No lo puedo convertir a json");
+                }
+            }
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+            }
+        });
+
+        //AsyncHttpClient
+         client = new AsyncHttpClient();
+//        Consultar datos del usuario
         client.get("https://ksantacrwordpresscom.000webhostapp.com/prueba.php?user_id="+Usuario.id+"&nombre="+Usuario.nombre+"&correo="+Usuario.correo+"&imagen="+Usuario.imagen, new AsyncHttpResponseHandler() {
 
             @Override
@@ -91,7 +119,6 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
                 // called when response HTTP status is "200 OK"
                 String data= new String(response);
                 Log.d("onSuccess: ", ""+ data);
-
                 //JSONObject text = new JSONObject();
 
 
@@ -117,15 +144,9 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
                     Log.d("Mensaje", "No lo puedo convertir a json");
                 }
 
-
-                //JSONObject jsonObject = new JSONObject();
-                //jsonObject.getJSONObject("as");
-                //JSONArray jsonArray = new JSONArray();
-
                 homeActivity = new Intent(MainActivity.this, HomeActivity.class);
                 startActivity(homeActivity);
 
-                //Log.d("Success", ""+isOnline());
             }
 
             @Override
@@ -133,9 +154,6 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
                 // called when response HTTP status is "4XX" (eg. 401, 403, 404)
                 //Log.d("onFailure: ", "OK");
 
-                //Log.d("onFAilure", ""+ isOnline());
-
-                //public void checkNetworkConnection(){
                     AlertDialog.Builder builder =new AlertDialog.Builder(MainActivity.this);
                     builder.setTitle(R.string.no_internet_title);
                     builder.setMessage(R.string.porfavor_verifique_su_conexion_a_internet);
@@ -147,11 +165,63 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
                     });
                     AlertDialog alertDialog = builder.create();
                     alertDialog.show();
-                //}
-
-
             }
+            @Override
+            public void onRetry(int retryNo) {
+                // called when request is retried
+                //Log.d("onRetry: ", "OK");
+            }
+        });
+//        Consultar estado del participante
+        client.get("https://ksantacrwordpresscom.000webhostapp.com/consultarParticipanteLoteria.php?user_id="+Usuario.id, new AsyncHttpResponseHandler() {
+            @Override
+            public void onStart() {
+                // called before request is started
+                Log.d("OnStart: ", "OK");
+            }
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] response) {
+                // called when response HTTP status is "200 OK"
+                String data= new String(response);
+                try{
+                    JSONObject jsonObject = new JSONObject(data);
+                    Usuario.participando = jsonObject.getBoolean("jugando");
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
+                // called when response HTTP status is "4XX" (eg. 401, 403, 404)
+            }
+            @Override
+            public void onRetry(int retryNo) {
+                // called when request is retried
+                //Log.d("onRetry: ", "OK");
+            }
+        });
 
+        client.get("https://ksantacrwordpresscom.000webhostapp.com/consultarNumeroParticipantesLoteria.php", new AsyncHttpResponseHandler() {
+            @Override
+            public void onStart() {
+                // called before request is started
+                Log.d("OnStart: ", "OK");
+            }
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] response) {
+                // called when response HTTP status is "200 OK"
+                String data= new String(response);
+                try{
+                    JSONObject jsonObject = new JSONObject(data);
+                    Usuario.cantidadParticipantes= jsonObject.getInt("cantidad");
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
+                // called when response HTTP status is "4XX" (eg. 401, 403, 404)
+            }
             @Override
             public void onRetry(int retryNo) {
                 // called when request is retried

@@ -3,28 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/layout_juego_2"
-    android:background="@color/fondoJuegoLoteria"
     android:orientation="vertical"
-
     >
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/fondoJuegoLoteria"
         android:gravity="center"
-
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-
+        android:layout_marginTop="15dp"
         android:layout_weight="1">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="220dp"
+            android:layout_height="120dp"
             android:layout_gravity="center"
 
-            android:background="@drawable/img_tickets"/>
+            android:background="@drawable/button_jugar_loteria_selector"
+
+
+            />
 
     </LinearLayout>
 
@@ -39,7 +37,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Jugar"
+            android:text="Lotería diaria"
+            android:textSize="20sp"
             android:textAlignment="center"
             android:textStyle="bold"
             android:textColor="@color/blanco"

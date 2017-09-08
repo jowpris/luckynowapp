@@ -84,10 +84,11 @@ public class RecargarFragment extends Fragment {
                 //cantidad = 0;
                 String texto = editText.getText().toString().toLowerCase();
                 String mensaje = "";
-                if(texto.equals("luckynow")){
+                if(texto.equals("andrea")){
                     Usuario.monedas+=100;
                     HomeActivity.textViewCantidadMonedas.setText(""+Usuario.monedas);
                     mensaje= "Se acreditaron 100 luckymonedas";
+                    Usuario.actualizarPuntos();
                 }else{
                     mensaje= "Código incorrecto :(";
                 }
