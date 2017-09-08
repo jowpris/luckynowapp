@@ -198,7 +198,21 @@ public class JuegoTragamonedasFragment extends Fragment {
                                     HomeActivity.textViewCantidadMonedas.setText("" + Usuario.monedas);
                                     AlertDialog alert = builder.create();
                                     alert.show();
-                                }else{
+                                }else if(wheel1.currentIndex == wheel2.currentIndex || wheel2.currentIndex == ultimaPos || wheel1.currentIndex == ultimaPos){
+
+                                    handler.postDelayed(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            //btn.setEnabled(true);
+                                            Usuario.puntos+=10;
+                                            Usuario.monedas+=50;
+                                            Usuario.actualizarPuntos();
+                                            HomeActivity.textViewCantidadMonedas.setText("" + Usuario.monedas);
+                                            textViewMonedasSiGana.setText("Haz ganado : 050");
+                                        }
+                                    }, 450);
+                                }
+                                else{
 
                                     handler.postDelayed(new Runnable() {
                                         @Override
