@@ -138,7 +138,8 @@ public class HomeActivity extends AppCompatActivity {
                         //layout_editarPerfil.bringToFront();
                         return true;
                     case R.id.recargar:
-                        pantallaRecargar();
+                        pantallaIntercambio();
+                        //pantallaRecargar();
                         //Intent mainActivity = new Intent(HomeActivity.this, MainActivity.class);
                         //startActivity(mainActivity);
 
@@ -202,5 +203,8 @@ public class HomeActivity extends AppCompatActivity {
     }
     public void pantallaRecompensas(){
         transaction.replace(R.id.layout_contenedor, new PremiosFragment()).commit();
+    }
+    public void pantallaIntercambio(){
+        transaction.replace(R.id.layout_contenedor, new IntercambioFragment()).commit();
     }
 }
