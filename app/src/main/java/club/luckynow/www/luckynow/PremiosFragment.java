@@ -78,6 +78,25 @@ public class PremiosFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_premios, container, false);
 
+
+        LinearLayout linearLayoutAmazon = (LinearLayout)view.findViewById(R.id.btn_gift_amazon);
+        linearLayoutAmazon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Te faltan "+ (10000 - Usuario.monedas) +" luckymonedas :c", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        LinearLayout linearLayoutUber = (LinearLayout)view.findViewById(R.id.btn_gift_uber);
+        linearLayoutUber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Te faltan "+ (100000 - Usuario.monedas) +" luckymonedas :c", Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+
         LayoutInflater inflater2 = LayoutInflater.from(getContext());
 
         final TextView textView = (TextView)view.findViewById(R.id.mensaje_ups);

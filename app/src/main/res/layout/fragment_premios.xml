@@ -129,6 +129,7 @@
                     />
 
                 <LinearLayout
+                    android:id="@+id/btn_gift_amazon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -177,6 +178,7 @@
                     />
 
                 <LinearLayout
+                    android:id="@+id/btn_gift_uber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
