@@ -195,12 +195,7 @@ public class HomeActivity extends AppCompatActivity {
         transaction.replace(R.id.layout_contenedor, new RecargarFragment()).commit();
         //layout_editarPerfil.bringToFront();
     }
-    public void editarPerfil(){
-        fragmentManager = getSupportFragmentManager();
-        transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.layout_contenedor, new EditarPerfilFragment()).commit();
-        //layout_editarPerfil.bringToFront();
-    }
+
     public void pantallaRanking(){
         transaction.replace(R.id.layout_contenedor, new RankingFragment()).commit();
     }

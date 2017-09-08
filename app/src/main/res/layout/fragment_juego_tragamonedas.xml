@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     tools:context="club.luckynow.www.luckynow.JuegoTragamonedasFragment"
-    android:background="@color/fondoPremios"
+    android:background="@color/blanco"
     >
 
     <LinearLayout
