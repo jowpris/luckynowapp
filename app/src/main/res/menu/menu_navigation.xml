@@ -23,6 +23,13 @@
         android:title="@string/top5"
         android:checked="false"
         />
+
+    <!--<item
+        android:id="@+id/recargar"
+        android:icon="@drawable/ic_tesoro"
+        android:title="@string/recargar"
+        android:checked="false"
+        />-->
     <item
         android:id="@+id/recargar"
         android:icon="@drawable/ic_cerdito"

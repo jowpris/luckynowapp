@@ -1,7 +1,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     tools:context="club.luckynow.www.luckynow.PremiosFragment"
     android:background="@color/blanco"
     >
@@ -11,7 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_gravity="center_vertical"
         >
 
         <TextView
@@ -33,7 +32,10 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:visibility="gone"
-            android:padding="50dp">
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginBottom="10dp"
+            >
 
             <!--<RelativeLayout
                 android:id="@+id/premio"
@@ -94,6 +96,164 @@
             </RelativeLayout>-->
 
         </LinearLayout>
+
+
+        <!--//Inicio-->
+
+        <LinearLayout
+            android:id="@+id/layout_intercambios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="@color/fondoJuegoTragamonedas"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/gift_amazon"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:background="@color/colorBotonJugarLoteria"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10.000"
+                        android:textStyle="bold"
+                        android:textColor="@color/blanco"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/monedas"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout><!--Fin amazon-->
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="@color/fondoJuegoTragamonedas"
+
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gift_uber"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:background="@color/colorBotonJugarLoteria"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100.000"
+                        android:textStyle="bold"
+                        android:textColor="@color/blanco"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/monedas"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout><!--Fin chilis-->
+
+            <!--<LinearLayout
+                android:id="@+id/tarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="@color/fondoJuegoTragamonedas"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gift_steam"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="@color/colorBotonJugarLoteria"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textStyle="bold"
+                        android:textColor="@color/blanco"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/monedas"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>&lt;!&ndash;Fin steam&ndash;&gt;-->
+
+
+        </LinearLayout>
+
 
 
 

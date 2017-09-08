@@ -100,6 +100,15 @@ public class JuegoTragamonedasFragment extends Fragment {
                 if(Usuario.monedas>= 50) {
                 btn.setBackgroundResource(R.drawable.bg_btn_lanzado);
                     btn.setText("Espere");
+
+                    HomeActivity.bottomNavigationView.getMenu().getItem(0).setEnabled(false);
+                    HomeActivity.bottomNavigationView.getMenu().getItem(1).setEnabled(false);
+                    HomeActivity.bottomNavigationView.getMenu().getItem(2).setEnabled(false);
+                    HomeActivity.bottomNavigationView.getMenu().getItem(3).setEnabled(false);
+                    HomeActivity.bottomNavigationView.getMenu().getItem(4).setEnabled(false);
+
+
+
                     Usuario.monedas -= 50;
                     Random rnd = new Random();
                     int numero1 = (int)(rnd.nextDouble()*1000)+100;
@@ -230,6 +239,14 @@ public class JuegoTragamonedasFragment extends Fragment {
                         }, 5500);
                     handler.postDelayed(new Runnable() {
                         public void run() {
+
+                            HomeActivity.bottomNavigationView.getMenu().getItem(0).setEnabled(true);
+                            HomeActivity.bottomNavigationView.getMenu().getItem(1).setEnabled(true);
+                            HomeActivity.bottomNavigationView.getMenu().getItem(2).setEnabled(true);
+                            HomeActivity.bottomNavigationView.getMenu().getItem(3).setEnabled(true);
+                            HomeActivity.bottomNavigationView.getMenu().getItem(4).setEnabled(true);
+
+
                             btn.setText("Lanzar");
                             btn.setBackgroundResource(R.drawable.bg_btn_lanzar);
                             btn.setEnabled(true);

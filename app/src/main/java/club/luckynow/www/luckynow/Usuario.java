@@ -46,8 +46,6 @@ public class Usuario {
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
             }
         });
-
-
     }
     //Actualizar los puntos de un usuario
     public static void actualizarPuntos(){

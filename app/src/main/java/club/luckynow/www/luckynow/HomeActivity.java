@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
     ImageView imageViewFotoPerfil;
     static TextView textViewNombreUsuario,textViewCantidadMonedas;
     RelativeLayout layout_editarPerfil;
-    BottomNavigationView bottomNavigationView;
+    static BottomNavigationView bottomNavigationView;
     FragmentManager fragmentManager;
     FragmentTransaction transaction;
     Context vistaPrincipal;
@@ -104,7 +104,10 @@ public class HomeActivity extends AppCompatActivity {
 
         bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottomNavigationView);
         //Log.d("Menu: ", ""+bottomNavigationView.getMenu().getItem(0).toString());
-        bottomNavigationView.getMenu().getItem(0).setChecked(true);
+        //
+        // bottomNavigationView.getMenu().getItem(0).setChecked(true);
+
+        //bottomNavigationView.getMenu().getItem(0).setEnabled(false);
 
         fragmentManager = getSupportFragmentManager();
         transaction = fragmentManager.beginTransaction();
@@ -138,8 +141,8 @@ public class HomeActivity extends AppCompatActivity {
                         //layout_editarPerfil.bringToFront();
                         return true;
                     case R.id.recargar:
-                        pantallaIntercambio();
-                        //pantallaRecargar();
+                        //pantallaIntercambio();
+                        pantallaRecargar();
                         //Intent mainActivity = new Intent(HomeActivity.this, MainActivity.class);
                         //startActivity(mainActivity);
 
@@ -204,7 +207,7 @@ public class HomeActivity extends AppCompatActivity {
     public void pantallaRecompensas(){
         transaction.replace(R.id.layout_contenedor, new PremiosFragment()).commit();
     }
-    public void pantallaIntercambio(){
+    /*public void pantallaIntercambio(){
         transaction.replace(R.id.layout_contenedor, new IntercambioFragment()).commit();
-    }
+    }*/
 }

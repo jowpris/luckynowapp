@@ -105,7 +105,7 @@ public class PremiosFragment extends Fragment {
                     LinearLayout.LayoutParams.WRAP_CONTENT
             );
             linear.setVisibility(View.VISIBLE);
-            params.setMargins(0, 30, 0, 0);
+            params.setMargins(0, 15, 0, 0);
             layout.setLayoutParams(params);
 
 
@@ -132,11 +132,12 @@ public class PremiosFragment extends Fragment {
                    // btn.setVisibility(View.GONE);
                     //btn.getParent()
                     Usuario.monedas += 200;
+                    Usuario.puntos +=10;
                     HomeActivity.textViewCantidadMonedas.setText(""+Usuario.monedas);
                     Usuario.cantidadPremios-=1;
                     Usuario.guardarPremios();
                     Usuario.actualizarPuntos();
-                    Log.d("Cantidad Premios", ""+Usuario.cantidadPremios);
+                    //Log.d("Cantidad Premios", ""+Usuario.cantidadPremios);
                     //if(linear.getTag()==btn.getTag()){
                      //   layout.setVisibility(View.GONE);
                     layout.setVisibility(View.GONE);
