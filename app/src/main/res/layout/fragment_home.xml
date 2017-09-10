@@ -1,28 +1,85 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     tools:context="club.luckynow.www.luckynow.HomeFragment"
+    android:background="@color/tw__light_gray"
     >
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-
-        android:layout_gravity="center_vertical"
-        android:gravity="center_horizontal"
         >
 
-        <include layout="@layout/juego_loteria_layout"
+        <LinearLayout
+            android:id="@+id/layout_juego_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+
+            android:background="@drawable/btn_juego_pressed"
+            android:layout_weight="1">
+
+            <!--<ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/button_jugar_loteria_selector"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                />-->
+            <ImageView
+                android:padding="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/btn_lottery_game"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_juego_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/btn_juego_pressed_1"
+            android:layout_weight="1">
+
+            <!--<ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/button_jugar_slot_selector"/>-->
+
+            <ImageView
+                android:layout_margin="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/btn_slot_machine_game"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+
+                />
+
+        </LinearLayout>
+
+        <!--<include layout="@layout/juego_loteria_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"></include>
         <include layout="@layout/juego_tragamonedas_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"></include>
+            android:layout_weight="1"></include>-->
 
 
 

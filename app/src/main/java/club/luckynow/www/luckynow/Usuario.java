@@ -30,6 +30,7 @@ public class Usuario {
     public static long milisegundos = 0;
     public static boolean participando = false;
     public static int cantidadParticipantes = 0;
+    public static ArrayList<Ganador> ganadores_sorteo = new ArrayList<>();
 
     public static ArrayList<Ganador> ganadores = new ArrayList<>();
 

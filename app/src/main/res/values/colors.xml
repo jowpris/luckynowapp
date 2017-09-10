@@ -15,4 +15,7 @@
 
     <color name="fondoPremios">#EBEBEB</color>
 
+    <color name="fondo_1">#eee</color>
+    <color name="fondo_2">#ddd</color>
+
 </resources>

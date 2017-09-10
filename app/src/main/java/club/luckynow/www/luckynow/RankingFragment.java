@@ -149,19 +149,19 @@ public class RankingFragment extends Fragment {
         }
 
         TextView txtPuntos = (TextView)view.findViewById(R.id.puntos_lugar_1);
-        txtPuntos.setText(""+ganadores.get(0).getPuntos());
+        txtPuntos.setText(""+ganadores.get(0).getPuntos()+ " puntos");
         TextView txtPuntos2 = (TextView)view.findViewById(R.id.puntos_lugar_2);
-        txtPuntos2.setText(""+ganadores.get(1).getPuntos());
+        txtPuntos2.setText(""+ganadores.get(1).getPuntos()+ " puntos");
         TextView txtPuntos3 = (TextView)view.findViewById(R.id.puntos_lugar_3);
-        txtPuntos3.setText(""+ganadores.get(2).getPuntos());
+        txtPuntos3.setText(""+ganadores.get(2).getPuntos()+ " puntos");
         TextView txtPuntos4 = (TextView)view.findViewById(R.id.puntos_lugar_4);
-        txtPuntos4.setText(""+ganadores.get(3).getPuntos());
+        txtPuntos4.setText(""+ganadores.get(3).getPuntos()+ " puntos");
         TextView txtPuntos5 = (TextView)view.findViewById(R.id.puntos_lugar_5);
-        txtPuntos5.setText(""+ganadores.get(4).getPuntos());
+        txtPuntos5.setText(""+ganadores.get(4).getPuntos()+ " puntos");
         TextView txtPuntos6 = (TextView)view.findViewById(R.id.puntos_lugar_6);
-        txtPuntos6.setText(""+ganadores.get(5).getPuntos());
+        txtPuntos6.setText(""+ganadores.get(5).getPuntos()+ " puntos");
         TextView txtPuntos7 = (TextView)view.findViewById(R.id.puntos_lugar_7);
-        txtPuntos7.setText(""+ganadores.get(6).getPuntos());
+        txtPuntos7.setText(""+ganadores.get(6).getPuntos()+ " puntos");
 
 
         return view;

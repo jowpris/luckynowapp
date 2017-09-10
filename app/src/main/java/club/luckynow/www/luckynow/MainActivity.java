@@ -56,6 +56,21 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        if(!isOnline()){
+            AlertDialog.Builder builder =new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle(R.string.no_internet_title);
+            builder.setMessage(R.string.porfavor_verifique_su_conexion_a_internet);
+            builder.setNegativeButton(R.string.cerrar, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            AlertDialog alertDialog = builder.create();
+            alertDialog.show();
+        }else{
+
+
         GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
         GoogleSignInAccount acct = result.getSignInAccount();
         String personName = acct.getDisplayName();
@@ -65,8 +80,6 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
         String personId = acct.getId();
         Uri personPhoto = acct.getPhotoUrl();
 
-
-
         Usuario.id = personId;
         Usuario.imagen = personPhoto;
 
@@ -75,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
         Usuario.apellido = personFamilyName;
         Usuario.nombre = personName;
         Usuario.correo = personEmail;
-        if(Usuario.imagen == null){
+        if (Usuario.imagen == null) {
             Usuario.imagen = Uri.parse("foto_perfil_usuario.png");
         }
 
@@ -86,63 +99,63 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
 
-                String data= new String(responseBody);
-                try{
+                String data = new String(responseBody);
+                try {
                     JSONArray jsonArray = new JSONArray(data);
-                    for (int i=0; i < jsonArray.length(); i++){
+                    for (int i = 0; i < jsonArray.length(); i++) {
                         Ganador tmpGanador = new Ganador(jsonArray.getJSONObject(i).getString("nombre"), jsonArray.getJSONObject(i).getString("imagen"), jsonArray.getJSONObject(i).getInt("puntos"));
                         Usuario.ganadores.add(tmpGanador);
                     }
-                }catch (Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
                     //Log.d("Mensaje", "No lo puedo convertir a json");
                 }
             }
+
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
             }
         });
 
         //AsyncHttpClient
-         client = new AsyncHttpClient();
+        client = new AsyncHttpClient();
 //        Consultar datos del usuario
-        client.get("https://ksantacrwordpresscom.000webhostapp.com/prueba.php?user_id="+Usuario.id+"&nombre="+Usuario.nombre+"&correo="+Usuario.correo+"&imagen="+Usuario.imagen, new AsyncHttpResponseHandler() {
+        client.get("https://ksantacrwordpresscom.000webhostapp.com/prueba.php?user_id=" + Usuario.id + "&nombre=" + Usuario.nombre + "&correo=" + Usuario.correo + "&imagen=" + Usuario.imagen, new AsyncHttpResponseHandler() {
 
             @Override
             public void onStart() {
                 // called before request is started
-                Log.d("OnStart: ", "OK");
+                //Log.d("OnStart: ", "OK");
             }
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] response) {
                 // called when response HTTP status is "200 OK"
-                String data= new String(response);
-                Log.d("onSuccess: ", ""+ data);
+                String data = new String(response);
+                //Log.d("onSuccess: ", "" + data);
                 //JSONObject text = new JSONObject();
-
-
-                try{
+                try {
                     JSONArray jsonArray = new JSONArray(data);
                     String texto = "";
                     Log.d("JSON ARRAY", jsonArray.toString());
 
-                    for (int i=0; i < jsonArray.length(); i++){
+                    for (int i = 0; i < jsonArray.length(); i++) {
                         texto = jsonArray.getJSONObject(i).getString("monedas");
                         Usuario.cantidadPremios = new Integer(jsonArray.getJSONObject(i).getString("premios"));
-
                         //Log.d("Cantidad premios", ""+Usuario.cantidadPremios);
-
                         Usuario.puntos = new Integer(jsonArray.getJSONObject(i).getString("puntos"));
                         //Log.d("Correo", texto);
                         //usuarios.add(texto);
                         Usuario.monedas = new Integer(texto);
-                        HomeActivity.textViewCantidadMonedas.setText(""+Usuario.monedas);
+                        HomeActivity.textViewCantidadMonedas.setText("" + Usuario.monedas);
                     }
-                }catch (Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
-                    Log.d("Mensaje", "No lo puedo convertir a json");
+                    //Usuario.monedas = 350;
+                    //Usuario.cantidadPremios = 2;
+                    Log.d("Mensaje", "No lo puedo convertir a json<---- al prueba.php");
                 }
+
 
                 homeActivity = new Intent(MainActivity.this, HomeActivity.class);
                 startActivity(homeActivity);
@@ -154,18 +167,21 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
                 // called when response HTTP status is "4XX" (eg. 401, 403, 404)
                 //Log.d("onFailure: ", "OK");
 
-                    AlertDialog.Builder builder =new AlertDialog.Builder(MainActivity.this);
-                    builder.setTitle(R.string.no_internet_title);
-                    builder.setMessage(R.string.porfavor_verifique_su_conexion_a_internet);
-                    builder.setNegativeButton(R.string.cerrar, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    });
-                    AlertDialog alertDialog = builder.create();
-                    alertDialog.show();
+
+                AlertDialog.Builder builder =new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle(R.string.no_internet_title);
+                builder.setMessage(R.string.porfavor_verifique_su_conexion_a_internet);
+                builder.setNegativeButton(R.string.cerrar, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
             }
+
             @Override
             public void onRetry(int retryNo) {
                 // called when request is retried
@@ -173,27 +189,30 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
             }
         });
 //        Consultar estado del participante
-        client.get("https://ksantacrwordpresscom.000webhostapp.com/consultarParticipanteLoteria.php?user_id="+Usuario.id, new AsyncHttpResponseHandler() {
+        client.get("https://ksantacrwordpresscom.000webhostapp.com/consultarParticipanteLoteria.php?user_id=" + Usuario.id, new AsyncHttpResponseHandler() {
             @Override
             public void onStart() {
                 // called before request is started
                 Log.d("OnStart: ", "OK");
             }
+
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] response) {
                 // called when response HTTP status is "200 OK"
-                String data= new String(response);
-                try{
+                String data = new String(response);
+                try {
                     JSONObject jsonObject = new JSONObject(data);
                     Usuario.participando = jsonObject.getBoolean("jugando");
-                }catch (Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
+
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
                 // called when response HTTP status is "4XX" (eg. 401, 403, 404)
             }
+
             @Override
             public void onRetry(int retryNo) {
                 // called when request is retried
@@ -207,21 +226,63 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
                 // called before request is started
                 Log.d("OnStart: ", "OK");
             }
+
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] response) {
                 // called when response HTTP status is "200 OK"
-                String data= new String(response);
-                try{
+                String data = new String(response);
+                try {
                     JSONObject jsonObject = new JSONObject(data);
-                    Usuario.cantidadParticipantes= jsonObject.getInt("cantidad");
-                }catch (Exception e){
+                    Usuario.cantidadParticipantes = jsonObject.getInt("cantidad");
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
+
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
                 // called when response HTTP status is "4XX" (eg. 401, 403, 404)
             }
+
+            @Override
+            public void onRetry(int retryNo) {
+                // called when request is retried
+                //Log.d("onRetry: ", "OK");
+            }
+        });
+
+        client.get("https://ksantacrwordpresscom.000webhostapp.com/consultarGanadoresLoteria.php", new AsyncHttpResponseHandler() {
+            @Override
+            public void onStart() {
+                // called before request is started
+                Log.d("OnStart: ", "OK");
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] response) {
+                // called when response HTTP status is "200 OK"
+                String data = new String(response);
+                try {
+                    JSONArray jsonArray = new JSONArray(data);
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        Ganador tmpGanador = new Ganador(jsonArray.getJSONObject(i).getString("nombre"), jsonArray.getJSONObject(i).getString("imagen"), 0);
+                        Usuario.ganadores_sorteo.add(tmpGanador);
+                        //Log.d("Nombre: ", ""+ jsonArray.getJSONObject(i).getString("nombre"));
+                        //Log.d("Foto: ", ""+ jsonArray.getJSONObject(i).getString("imagen"));
+
+                    }
+                    //JSONObject jsonObject = new JSONObject(data);
+                    //Usuario.participando = jsonObject.getBoolean("jugando");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
+                // called when response HTTP status is "4XX" (eg. 401, 403, 404)
+            }
+
             @Override
             public void onRetry(int retryNo) {
                 // called when request is retried
@@ -234,6 +295,9 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
         mGoogle.onActivityResult(requestCode, resultCode, data);
     }
 
+
+    }
+
     @Override
     public void onGoogleAuthSignIn(String s, String s1) {
         //Toast.makeText(this, "on Google auth sign in: "+s1, Toast.LENGTH_LONG).show();
@@ -241,18 +305,14 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
         startActivity(homeActivity);*/
 
     }
-
     @Override
     public void onGoogleAuthSignInFailed(String s) {
         Toast.makeText(this, "onGoogleAuthSignInFailed: "+s.toString(), Toast.LENGTH_LONG).show();
     }
-
     @Override
     public void onGoogleAuthSignOut() {
         //Toast.makeText(this, "logout ", Toast.LENGTH_LONG).show();
-
     }
-
     public boolean isOnline() {
         ConnectivityManager conMgr = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = conMgr.getActiveNetworkInfo();

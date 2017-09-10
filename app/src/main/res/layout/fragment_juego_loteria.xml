@@ -17,6 +17,47 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="115dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ganadores del útimo sorteo"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:gravity="center"/>
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+
+                >
+
+                <LinearLayout
+
+                    android:id="@+id/ganadoresLoteria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <!--<include layout="@layout/ganador_layout"></include>
+                     <include layout="@layout/ganador_layout"></include>
+                     <include layout="@layout/ganador_layout"></include>
+                     <include layout="@layout/ganador_layout"></include>-->
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/fondoJuegoLoteria"
             android:gravity="center"
@@ -65,7 +106,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="15dp"
             android:layout_gravity="center"
 
             android:padding="20dp"
@@ -111,7 +152,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="15dp"
             android:gravity="center">
 
 

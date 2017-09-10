@@ -79,6 +79,10 @@ public class HomeFragment extends Fragment {
         //transaction = fragmentManager.beginTransaction();
         LinearLayout juegoTragamonedas = (LinearLayout) view.findViewById(R.id.layout_juego_1);
         LinearLayout juegoLoteria = (LinearLayout) view.findViewById(R.id.layout_juego_2);
+
+        //LinearLayout ganadoresLoteria = (LinearLayout)view.findViewById(R.id.ganadoresLoteria);
+
+
         juegoTragamonedas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

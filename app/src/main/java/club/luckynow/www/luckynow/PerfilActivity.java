@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
+import org.w3c.dom.Text;
+
 public class PerfilActivity extends AppCompatActivity {
 
     @Override
@@ -26,6 +28,9 @@ public class PerfilActivity extends AppCompatActivity {
         txtCantidadMonedas.setText(""+Usuario.monedas);
         txtViewCorreo.setText(Usuario.correo);
         txtViewNombre.setText(Usuario.nombre);
+
+        TextView txtPerfilPuntos = (TextView)findViewById(R.id.perfil_puntos);
+        txtPerfilPuntos.setText("Mis puntos: "+Usuario.puntos);
 
 
         if(Usuario.imagen.toString() != "foto_perfil_usuario.png"){

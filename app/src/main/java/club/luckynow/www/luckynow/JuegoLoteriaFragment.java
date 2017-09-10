@@ -2,6 +2,7 @@ package club.luckynow.www.luckynow;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -11,8 +12,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.sql.BatchUpdateException;
 import java.util.concurrent.TimeUnit;
@@ -120,11 +127,42 @@ public class JuegoLoteriaFragment extends Fragment {
         //ConsultarMilisegundos consultarMilisegundos = (ConsultarMilisegundos)
 
         new ConsultarMilisegundos(getContext(), text1).execute("Se está preparando el sorteo");
+        LayoutInflater inflater2 = LayoutInflater.from(getContext());
+
+        final LinearLayout linear = (LinearLayout)view.findViewById(R.id.ganadoresLoteria);
+        for (Ganador ganador: Usuario.ganadores_sorteo) {
+
+        //}
+        //for (int i = 0; i < Usuario.ganadores_sorteo.size(); i++){
+            //array[i] = data;
+            final LinearLayout layout = (LinearLayout) inflater2.inflate(R.layout.ganador_layout, null, false);
+
+            //layout.setBackgroundColor(Color.BLUE);
+
+            /*linear.setLayoutParams(new ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.WRAP_CONTENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT));*/
+
+            final ImageView foto = (ImageView)layout.findViewById(R.id.img_ganador);
+            final TextView nombre = (TextView)layout.findViewById(R.id.nombre_ganador);
+
+            Log.d("Nombre", ""+ganador.getNombre());
+            Log.d("Foto", ""+ganador.getFoto());
+
+            if(!ganador.getFoto().contains("foto_perfil_usuario.png")){
+                Uri myUri = Uri.parse(ganador.getFoto());
+                Glide.with(getContext()).load(myUri).apply(RequestOptions.circleCropTransform()).into(foto);
+            }
+            nombre.setText(""+ganador.getNombre());
+
+            linear.addView(layout);
+
+        }
 
         return view;
-
-
     }
+
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
