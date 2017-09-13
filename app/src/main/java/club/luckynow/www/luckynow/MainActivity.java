@@ -69,7 +69,8 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
             AlertDialog alertDialog = builder.create();
             alertDialog.show();
         }else{
-
+            Usuario.ganadores_sorteo.clear();
+            Toast.makeText(getApplicationContext(), "Cargando datos ...", Toast.LENGTH_SHORT).show();
 
         GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
         GoogleSignInAccount acct = result.getSignInAccount();
@@ -94,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
 
         AsyncHttpClient client = new AsyncHttpClient();
 //        Consultar ganadores
-        client.get("https://ksantacrwordpresscom.000webhostapp.com/ganadores.php", new AsyncHttpResponseHandler() {
+        /*client.get("https://ksantacrwordpresscom.000webhostapp.com/ganadores.php", new AsyncHttpResponseHandler() {
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -115,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
             }
-        });
+        });*/
 
         //AsyncHttpClient
         client = new AsyncHttpClient();
@@ -126,34 +127,43 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
             public void onStart() {
                 // called before request is started
                 //Log.d("OnStart: ", "OK");
+                Toast.makeText(getApplicationContext(), "Conectando...", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] response) {
                 // called when response HTTP status is "200 OK"
                 String data = new String(response);
-                //Log.d("onSuccess: ", "" + data);
+                Log.d("onSuccess: -------------------->", "" + data);
                 //JSONObject text = new JSONObject();
                 try {
+
+
                     JSONArray jsonArray = new JSONArray(data);
+
+                    JSONObject jsonObject =jsonArray.getJSONObject(0);
+                    Usuario.cantidadPremios = jsonObject.getInt("premios");
+                    Usuario.puntos = jsonObject.getInt("puntos");
+                    Usuario.monedas = jsonObject.getInt("monedas");
+                    //HomeActivity.textViewCantidadMonedas.setText("" + Usuario.monedas);
+
+                    //Log.d("JSON", "<<<<<<<"+jsonObject.toString());
+                    /*JSONArray jsonArray = new JSONArray(data);
                     String texto = "";
                     Log.d("JSON ARRAY", jsonArray.toString());
 
                     for (int i = 0; i < jsonArray.length(); i++) {
                         texto = jsonArray.getJSONObject(i).getString("monedas");
                         Usuario.cantidadPremios = new Integer(jsonArray.getJSONObject(i).getString("premios"));
-                        //Log.d("Cantidad premios", ""+Usuario.cantidadPremios);
                         Usuario.puntos = new Integer(jsonArray.getJSONObject(i).getString("puntos"));
-                        //Log.d("Correo", texto);
-                        //usuarios.add(texto);
                         Usuario.monedas = new Integer(texto);
                         HomeActivity.textViewCantidadMonedas.setText("" + Usuario.monedas);
-                    }
+                    }*/
                 } catch (Exception e) {
                     e.printStackTrace();
                     //Usuario.monedas = 350;
                     //Usuario.cantidadPremios = 2;
-                    Log.d("Mensaje", "No lo puedo convertir a json<---- al prueba.php");
+                    //Log.d("Mensaje", "No lo puedo convertir a json<---- al prueba.php");
                 }
 
 
@@ -193,7 +203,7 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
             @Override
             public void onStart() {
                 // called before request is started
-                Log.d("OnStart: ", "OK");
+                //Log.d("OnStart: ", "OK");
             }
 
             @Override
@@ -224,7 +234,7 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
             @Override
             public void onStart() {
                 // called before request is started
-                Log.d("OnStart: ", "OK");
+                //Log.d("OnStart: ", "OK");
             }
 
             @Override
@@ -255,7 +265,7 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
             @Override
             public void onStart() {
                 // called before request is started
-                Log.d("OnStart: ", "OK");
+                //Log.d("OnStart: ", "OK");
             }
 
             @Override
@@ -300,6 +310,11 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
 
     @Override
     public void onGoogleAuthSignIn(String s, String s1) {
+
+        //Toast.makeText(this, "on Google auth sign in: "+s, Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "Bienvenido a Luckynow", Toast.LENGTH_LONG).show();
+        //Log.d("String1:" , ""+ s);
+        //Log.d("String2:" , ""+ s1);
         //Toast.makeText(this, "on Google auth sign in: "+s1, Toast.LENGTH_LONG).show();
        /* homeActivity = new Intent(this, HomeActivity.class);
         startActivity(homeActivity);*/
@@ -307,7 +322,8 @@ public class MainActivity extends AppCompatActivity implements GoogleListener {
     }
     @Override
     public void onGoogleAuthSignInFailed(String s) {
-        Toast.makeText(this, "onGoogleAuthSignInFailed: "+s.toString(), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "No se puede iniciar con Google desde tu dispositivo", Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "onGoogleAuthSignInFailed: "+s.toString(), Toast.LENGTH_LONG).show();
     }
     @Override
     public void onGoogleAuthSignOut() {

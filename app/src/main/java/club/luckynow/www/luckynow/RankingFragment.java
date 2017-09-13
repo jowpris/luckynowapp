@@ -79,9 +79,14 @@ public class RankingFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
+        Usuario.ganadores.clear();
         final View view = inflater.inflate(R.layout.fragment_ranking, container, false);
 
-        final ArrayList<Ganador> ganadores = Usuario.ganadores;
+        //https://ksantacrwordpresscom.000webhostapp.com/ganadores.php
+        new ConsultarGanadores(getContext(), view).execute("");
+
+
+        /*final ArrayList<Ganador> ganadores = Usuario.ganadores;
 
         TextView txtView = (TextView)view.findViewById(R.id.nombre_lugar_1);
         txtView.setText(ganadores.get(0).getNombre());
@@ -105,6 +110,11 @@ public class RankingFragment extends Fragment {
         txtView6.setText(ganadores.get(6).getNombre());
 
         ImageView imageView = (ImageView) view.findViewById(R.id.foto_lugar_1);
+        //imageView.setMaxWidth(100);
+        //imageView.setMaxHeight(100);
+
+
+
         ImageView imageView2 = (ImageView) view.findViewById(R.id.foto_lugar_2);
         ImageView imageView3 = (ImageView) view.findViewById(R.id.foto_lugar_3);
         ImageView imageView4 = (ImageView) view.findViewById(R.id.foto_lugar_4);
@@ -120,6 +130,10 @@ public class RankingFragment extends Fragment {
             //Log.d("Hola", ""+ganadores.get(0).getFoto());
             Uri myUri = Uri.parse(ganadores.get(0).getFoto());
             Glide.with(getContext()).load(myUri).apply(RequestOptions.circleCropTransform()).into(imageView);
+
+            imageView.getLayoutParams().height = 175;
+            imageView.getLayoutParams().width = 175;
+
         }
         if(!ganadores.get(1).getFoto().contains("foto_perfil_usuario.png")){
             //Log.d("Hola2", ""+ganadores.get(1).getFoto());
@@ -163,7 +177,7 @@ public class RankingFragment extends Fragment {
         TextView txtPuntos7 = (TextView)view.findViewById(R.id.puntos_lugar_7);
         txtPuntos7.setText(""+ganadores.get(6).getPuntos()+ " puntos");
 
-
+*/
         return view;
     }
 

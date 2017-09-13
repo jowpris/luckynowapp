@@ -83,17 +83,21 @@ public class RecargarFragment extends Fragment {
                 //HomeActivity.textViewCantidadMonedas.setText(""+Usuario.monedas);
                 //cantidad = 0;
                 String texto = editText.getText().toString().toLowerCase();
-                String mensaje = "";
-                if(texto.equals("andrea")){
+                //String mensaje = "";
+
+
+                new ConsultarCodigos(getContext(), texto).execute("");
+
+                /*if(texto.equals("andrea")){
                     Usuario.monedas+=100;
                     HomeActivity.textViewCantidadMonedas.setText(""+Usuario.monedas);
                     mensaje= "Se acreditaron 100 luckymonedas";
                     Usuario.actualizarPuntos();
                 }else{
                     mensaje= "Código incorrecto :(";
-                }
+                }*/
                 editText.setText("");
-                Toast.makeText(v.getContext(),mensaje, Toast.LENGTH_LONG).show();
+
             }
         });
 
