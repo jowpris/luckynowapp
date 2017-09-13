@@ -34,4 +34,5 @@ Each launched in this game mode will have the cost of fifty luckycoins.</string>
     <string name="no_internet_title">No internet connection</string>
     <string name="porfavor_verifique_su_conexion_a_internet">Please turn on internet connection to continue.</string>
     <string name="cerrar">close</string>
+    <string name="c_mo_conseguir_monedas"><u>How get coins?</u></string>
 </resources>

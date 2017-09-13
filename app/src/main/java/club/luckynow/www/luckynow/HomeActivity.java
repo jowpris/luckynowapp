@@ -30,9 +30,9 @@ public class HomeActivity extends AppCompatActivity {
     static TextView textViewNombreUsuario,textViewCantidadMonedas;
     RelativeLayout layout_editarPerfil;
     static BottomNavigationView bottomNavigationView;
-    FragmentManager fragmentManager;
-    FragmentTransaction transaction;
-    Context vistaPrincipal;
+    static public FragmentManager fragmentManager;
+    static public FragmentTransaction transaction;
+    static public Context vistaPrincipal;
 
 
     @Override

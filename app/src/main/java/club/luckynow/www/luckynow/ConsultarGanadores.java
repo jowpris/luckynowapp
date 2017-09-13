@@ -167,8 +167,8 @@ public class ConsultarGanadores extends AsyncTask<String, Void, Boolean> {
             Uri myUri = Uri.parse(ganadores.get(0).getFoto());
             Glide.with(context).load(myUri).apply(RequestOptions.circleCropTransform()).into(imageView);
 
-            imageView.getLayoutParams().height = 175;
-            imageView.getLayoutParams().width = 175;
+            imageView.getLayoutParams().height = 200;
+            imageView.getLayoutParams().width = 200;
 
         }
         if(!ganadores.get(1).getFoto().contains("foto_perfil_usuario.png")){

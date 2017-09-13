@@ -79,19 +79,93 @@ public class PremiosFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_premios, container, false);
 
 
+        LinearLayout linearLayoutPlay = (LinearLayout)view.findViewById(R.id.btn_gift_play_store);
+        linearLayoutPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(Usuario.monedas-50000>=0){
+
+                    Usuario.puntos+=500;
+                    Usuario.monedas-=50000;
+                    HomeActivity.textViewCantidadMonedas.setText(""+Usuario.monedas);
+                    //actualizar en la bd
+                    Usuario.actualizarPuntos();
+                    new EnviarCorreo(getContext()).execute("");
+
+                    //Log.d("enviar correo", "");
+                }else{
+                    Toast.makeText(getContext(), "Te faltan "+ (50000 - Usuario.monedas) +" luckymonedas :c", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        LinearLayout linearLayoutPaypal = (LinearLayout)view.findViewById(R.id.btn_gift_paypal);
+        linearLayoutPaypal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(Usuario.monedas-100000>=0){
+
+                    Usuario.puntos+=1000;
+                    Usuario.monedas-=100000;
+                    HomeActivity.textViewCantidadMonedas.setText(""+Usuario.monedas);
+                    //actualizar en la bd
+                    Usuario.actualizarPuntos();
+                    new EnviarCorreo(getContext()).execute("");
+
+
+                    Log.d("enviar correo", "");
+                }else{
+                    Toast.makeText(getContext(), "Te faltan "+ (100000 - Usuario.monedas) +" luckymonedas :c", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
         LinearLayout linearLayoutAmazon = (LinearLayout)view.findViewById(R.id.btn_gift_amazon);
         linearLayoutAmazon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "Te faltan "+ (10000 - Usuario.monedas) +" luckymonedas :c", Toast.LENGTH_LONG).show();
+
+                if(Usuario.monedas-150000>=0){
+
+
+                    Usuario.puntos+=1500;
+                    Usuario.monedas-=150000;
+                    HomeActivity.textViewCantidadMonedas.setText(""+Usuario.monedas);
+                    //actualizar en la bd
+                    Usuario.actualizarPuntos();
+                    new EnviarCorreo(getContext()).execute("");
+
+
+                    Log.d("enviar correo", "");
+                }else{
+                    Toast.makeText(getContext(), "Te faltan "+ (150000 - Usuario.monedas) +" luckymonedas :c", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
-        LinearLayout linearLayoutUber = (LinearLayout)view.findViewById(R.id.btn_gift_uber);
-        linearLayoutUber.setOnClickListener(new View.OnClickListener() {
+
+        LinearLayout linearLayoutPizza = (LinearLayout)view.findViewById(R.id.btn_gift_pizza);
+        linearLayoutPizza.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "Te faltan "+ (100000 - Usuario.monedas) +" luckymonedas :c", Toast.LENGTH_LONG).show();
+
+                if(Usuario.monedas-200000>=0){
+
+                    Usuario.puntos+=2000;
+                    Usuario.monedas-=200000;
+                    HomeActivity.textViewCantidadMonedas.setText(""+Usuario.monedas);
+                    //actualizar en la bd
+                    Usuario.actualizarPuntos();
+                    new EnviarCorreo(getContext()).execute("");
+
+
+                    Log.d("enviar correo", "");
+                }else{
+                    Toast.makeText(getContext(), "Te faltan "+ (200000 - Usuario.monedas) +" luckymonedas :c", Toast.LENGTH_LONG).show();
+                }
             }
         });
 

@@ -32,7 +32,7 @@
     <string name="no_internet_title">No hay conexción a internet</string>
     <string name="porfavor_verifique_su_conexion_a_internet">Porfavor verifique que está conectado a una red de internet para continuar.</string>
     <string name="cerrar">Cerrar</string>
-
+    <string name="c_mo_conseguir_monedas"><u>¿Cómo conseguir monedas?</u></string>
 
 
 </resources>

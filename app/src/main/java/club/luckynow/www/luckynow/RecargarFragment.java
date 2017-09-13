@@ -71,6 +71,28 @@ public class RecargarFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_recargar, container, false);
 
         Button btnAgregarMonedas = (Button) view.findViewById(R.id.btnRecargar);
+        TextView btn_ir_ayuda = (TextView)view.findViewById(R.id.btn_ir_ayuda);
+
+        btn_ir_ayuda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(getContext(), "ayuda", Toast.LENGTH_SHORT).show();
+
+
+
+
+                //HomeActivity.fragmentManager =
+                HomeActivity.transaction = HomeActivity.fragmentManager.beginTransaction();
+                HomeActivity.transaction.replace(R.id.layout_contenedor, new AyudaFragment()).commit();
+
+                //HomeActivity.getSupportFragmentManager();
+                //HomeActivity.fragmentManager.beginTransaction();
+                //YourFragment fragment_obj = (YourFragment)getSupportFragmentManager().
+                //        findFragmentById(R.id.fragment_id);
+
+
+            }
+        });
 
         final EditText editText = (EditText) view.findViewById(R.id.editTextCantidadRrecargar);
 

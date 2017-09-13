@@ -52,6 +52,19 @@
             android:textStyle="bold"
             android:textSize="@dimen/botonesTamaño"
             android:text="@string/recargar"/>
+        
+        
+        <TextView
+            android:id="@+id/btn_ir_ayuda"
+            android:layout_marginTop="25dp"
+            android:textSize="@dimen/botonesTamaño"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:text="@string/c_mo_conseguir_monedas"
+            />
 
     </LinearLayout>
 
